@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Text Translator - Translate English, Arabic, Urdu, Spanish and More</title>
+<meta name="description" content="Translate text online between common languages including English, Arabic, Urdu, Spanish, French, German, Hindi and more. Fast browser-based translator tool.">
+<meta name="keywords" content="text translator, translate online, english to urdu, english to arabic, free translator">
+<link rel="canonical" href="https://jjafri45.github.io/text-translator.html">
+<meta property="og:title" content="Text Translator - Translate English, Arabic, Urdu, Spanish and More">
+<meta property="og:description" content="Translate short text online between popular languages with a lightweight browser tool.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://jjafri45.github.io/text-translator.html">
+<meta property="og:site_name" content="ToolDrop">
+<meta name="twitter:card" content="summary">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="theme-color" content="#111110">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Inter:wght@400;450;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f8f8f6;--surface:#fff;--border:#e5e4e0;--text:#111110;
+  --muted:#6b6a66;--accent:#e8410a;--accent2:#1a56db;
+  --font:'Inter',sans-serif;--display:'Outfit',sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--font);background:var(--bg);color:var(--text);font-size:16px;line-height:1.65}
+nav{background:#fff;border-bottom:1px solid var(--border);padding:0 1.5rem;height:58px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100}
+.logo{font-family:var(--display);font-weight:800;font-size:1.25rem;color:var(--text);text-decoration:none;letter-spacing:-0.3px}
+.logo span{color:var(--accent)}
+.nav-links{display:flex;gap:1.5rem;font-size:0.88rem;font-weight:500}
+.nav-links a{color:var(--muted);text-decoration:none;transition:color 0.15s}
+.nav-links a:hover{color:var(--text)}
+.breadcrumb{font-size:0.82rem;color:var(--muted);padding:0.8rem 0;display:flex;gap:0.5rem;align-items:center}
+.breadcrumb a{color:var(--muted);text-decoration:none}.breadcrumb a:hover{color:var(--accent)}
+.container{max-width:1100px;margin:0 auto;padding:0 1.5rem}
+.page-wrap{max-width:1100px;margin:0 auto;padding:2rem 1.5rem;display:grid;grid-template-columns:1fr 300px;gap:2rem}
+@media(max-width:800px){.page-wrap{grid-template-columns:1fr}}
+.ad-slot{background:#fff;border:1.5px dashed var(--border);border-radius:8px;display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:0.75rem;font-family:monospace;letter-spacing:.05em;text-transform:uppercase}
+.ad-banner{width:100%;height:90px;margin-bottom:1.5rem}
+.ad-sidebar{width:100%;height:250px}
+.tool-header{margin-bottom:1.5rem}
+.tool-header .icon{font-size:2.2rem;margin-bottom:0.6rem}
+.tool-header h1{font-family:var(--display);font-size:1.9rem;font-weight:700;letter-spacing:-0.5px;line-height:1.2;margin-bottom:0.5rem}
+.tool-header p.intro{color:var(--muted);font-size:0.97rem;line-height:1.7;max-width:640px}
+.tool-body{background:#fff;border:1.5px solid var(--border);border-radius:12px;padding:2rem}
+textarea,select{width:100%;padding:0.75rem 0.9rem;border:1.5px solid var(--border);border-radius:8px;font-family:var(--font);font-size:0.95rem;background:var(--bg);color:var(--text);outline:none}
+textarea{min-height:160px;resize:vertical}
+textarea:focus,select:focus{border-color:var(--accent2);background:#fff}
+.input-row{display:flex;gap:0.75rem;flex-wrap:wrap;margin-bottom:1rem}
+.input-group{flex:1;min-width:160px}
+label{display:block;font-size:0.83rem;font-weight:500;color:var(--muted);margin-bottom:0.35rem}
+.btn{padding:.65rem 1.3rem;border:none;border-radius:7px;font-family:var(--display);font-weight:600;font-size:.9rem;cursor:pointer;transition:all .15s}
+.btn-primary{background:var(--text);color:#fff}.btn-primary:hover{background:var(--accent)}
+.btn-row{display:flex;gap:.5rem;flex-wrap:wrap;margin:1rem 0}
+.result-box{background:var(--bg);border:1.5px solid var(--border);border-radius:8px;padding:1rem 1.1rem;font-size:0.95rem;min-height:90px;white-space:pre-wrap;line-height:1.6}
+.muted{font-size:.85rem;color:var(--muted);margin-top:.7rem}
+.related{margin-top:2rem}
+.related h3{font-family:var(--display);font-size:1.05rem;font-weight:700;margin-bottom:.8rem}
+.related-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:.6rem}
+.related-card{background:#fff;border:1.5px solid var(--border);border-radius:8px;padding:.8rem;text-decoration:none;color:var(--text);display:block;font-size:.85rem;font-weight:500;transition:all .15s}
+.related-card:hover{border-color:var(--accent);color:var(--accent)}
+.info-grid{display:grid;grid-template-columns:1fr;gap:1rem;margin-top:1.5rem}
+.info-card{background:#fff;border:1.5px solid var(--border);border-radius:10px;padding:1.2rem 1.25rem}
+.info-card h2{font-family:var(--display);font-size:1rem;margin-bottom:.45rem}
+.info-card p,.info-card li{color:var(--muted);font-size:.94rem;line-height:1.7}
+.info-card ul{padding-left:1.15rem}
+footer{background:var(--text);color:rgba(255,255,255,.45);text-align:center;padding:2rem 1rem;font-size:.82rem;margin-top:3rem}
+footer a{color:rgba(255,255,255,.6);text-decoration:none}
+footer a:hover{color:#fff}
+</style>
+<script type="application/ld+json">[{"@context":"https://schema.org","@type":"WebApplication","name":"Free Text Translator","url":"https://jjafri45.github.io/text-translator.html","description":"Translate text online between common languages including English, Arabic, Urdu, Spanish, French, German, Hindi and more. Fast browser-based translator tool.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","browserRequirements":"Requires JavaScript and a modern web browser","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://jjafri45.github.io/"},{"@type":"ListItem","position":2,"name":"Free Text Translator","item":"https://jjafri45.github.io/text-translator.html"}]}]</script>
+</head>
+<body>
+<nav>
+  <a href="index.html" class="logo">Tool<span>Drop</span></a>
+  <div class="nav-links">
+    <a href="index.html">All Tools</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="privacy.html">Privacy</a>
+  </div>
+</nav>
+<div class="container"><nav class="breadcrumb"><a href="index.html">Home</a> Ã¢â‚¬Âº <span>Text Tools</span> Ã¢â‚¬Âº <span>Text Translator</span></nav></div>
+<div class="page-wrap">
+  <div class="tool-main">
+    <div class="ad-slot ad-banner">[ Ad Ã¢â‚¬â€ 728Ãƒâ€”90 Banner ]</div>
+    <div class="tool-header">
+      <div class="icon">Ã°Å¸Å’Â</div>
+      <h1>Free Text Translator</h1>
+      <p class="intro">Translate short text between common languages right in your browser. Handy for quick phrases, captions, notes, and everyday multilingual checks.</p>
+    </div>
+    <div class="tool-body">
+      <textarea id="tr-input" placeholder="Enter text to translate..."></textarea>
+      <div class="input-row" style="margin-top:1rem">
+        <div class="input-group"><label>From</label><select id="tr-from"></select></div>
+        <div class="input-group"><label>To</label><select id="tr-to"></select></div>
+      </div>
+      <div class="btn-row">
+        <button class="btn btn-primary" onclick="translateText()">Translate</button>
+      </div>
+      <div class="result-box" id="tr-output">Translation will appear here.</div>
+      <p class="muted">Best for quick phrases and short text. Translation quality depends on the public provider response.</p>
+    </div>
+    <div class="related"><h3>Related Tools</h3><div class="related-grid"><a href="case-converter.html" class="related-card">Ã°Å¸â€Â¡ Case Converter</a>
+<a href="word-counter.html" class="related-card">Ã°Å¸â€œÂ Word Counter</a>
+<a href="text-reverser.html" class="related-card">Ã°Å¸â€â€ž Text Reverser</a>
+</div></div>
+    <div class="info-grid">
+      <section class="info-card">
+        <h2>What this translator is best for</h2>
+        <p>This page is useful for short phrases, quick comprehension checks, captions, notes, and everyday multilingual browsing. It is designed for speed and convenience rather than deep editorial translation.</p>
+      </section>
+      <section class="info-card">
+        <h2>When not to rely on it</h2>
+        <p>Do not use the output as the sole basis for contracts, compliance content, legal documents, or medical instructions. Public translation services can miss nuance, dialect, technical meaning, and cultural context.</p>
+      </section>
+      <section class="info-card">
+        <h2>Typical use cases</h2>
+        <ul>
+          <li>understanding a short message or social caption</li>
+          <li>checking wording before sending a quick response</li>
+          <li>testing multilingual snippets for site copy</li>
+          <li>reviewing simple travel or support phrases</li>
+        </ul>
+      </section>
+    </div>
+    <div class="ad-slot ad-banner" style="margin-top:1.5rem">[ Ad Ã¢â‚¬â€ 728Ãƒâ€”90 Banner ]</div>
+  </div>
+  <aside>
+    <div class="ad-slot ad-sidebar">[ Ad Ã¢â‚¬â€ 300Ãƒâ€”250 ]</div>
+  </aside>
+</div>
+<script>
+const trLanguages=[['en','English'],['es','Spanish'],['fr','French'],['de','German'],['ar','Arabic'],['ur','Urdu'],['hi','Hindi'],['pt','Portuguese'],['it','Italian'],['ru','Russian'],['zh-CN','Chinese (Simplified)']];
+const trFrom=document.getElementById('tr-from');
+const trTo=document.getElementById('tr-to');
+trFrom.innerHTML=trLanguages.map(([code,name])=>`<option value="${code}">${name}</option>`).join('');
+trTo.innerHTML=trLanguages.map(([code,name])=>`<option value="${code}">${name}</option>`).join('');
+trFrom.value='en';
+trTo.value='ur';
+async function translateText(){
+  const text=document.getElementById('tr-input').value.trim();
+  const from=trFrom.value;
+  const to=trTo.value;
+  const out=document.getElementById('tr-output');
+  if(!text){out.textContent='Enter text to translate.';return;}
+  out.textContent='Translating...';
+  try{
+    const url=`https://api.mymemory.translated.net/get?q=${encodeURIComponent(text)}&langpair=${encodeURIComponent(from+'|'+to)}`;
+    const res=await fetch(url);
+    const data=await res.json();
+    if(!res.ok || !data.responseData || !data.responseData.translatedText){throw new Error('No translation returned.');}
+    out.textContent=data.responseData.translatedText;
+  }catch(e){
+    out.textContent='Could not translate right now. Please try again in a moment.';
+  }
+}
+</script>
+<footer>
+  <p>&copy; 2026 ToolDrop &nbsp;&middot;&nbsp; <a href="about.html">About</a> &nbsp;&middot;&nbsp; <a href="contact.html">Contact</a> &nbsp;&middot;&nbsp; <a href="privacy.html">Privacy</a> &nbsp;&middot;&nbsp; <a href="terms.html">Terms</a> &nbsp;&middot;&nbsp; <a href="advertising-disclosure.html">Advertising Disclosure</a></p>
+</footer>
+</body>
+</html>

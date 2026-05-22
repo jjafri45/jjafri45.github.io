@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Timezone Converter - Convert Meeting Times Across Cities</title>
+<meta name="description" content="Convert time between common timezones including UTC, New York, London, Dubai, Karachi, Delhi, Singapore and Sydney. Free timezone converter for meetings and travel.">
+<meta name="keywords" content="timezone converter, world clock converter, convert meeting time, utc to pst, timezone calculator">
+<link rel="canonical" href="https://jjafri45.github.io/timezone-converter.html">
+<meta property="og:title" content="Timezone Converter - Convert Meeting Times Across Cities">
+<meta property="og:description" content="Convert meeting times and local dates across major timezones with a simple browser tool.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://jjafri45.github.io/timezone-converter.html">
+<meta property="og:site_name" content="ToolDrop">
+<meta name="twitter:card" content="summary">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="theme-color" content="#111110">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Inter:wght@400;450;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f8f8f6;--surface:#fff;--border:#e5e4e0;--text:#111110;
+  --muted:#6b6a66;--accent:#e8410a;--accent2:#1a56db;
+  --font:'Inter',sans-serif;--display:'Outfit',sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--font);background:var(--bg);color:var(--text);font-size:16px;line-height:1.65}
+nav{background:#fff;border-bottom:1px solid var(--border);padding:0 1.5rem;height:58px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100}
+.logo{font-family:var(--display);font-weight:800;font-size:1.25rem;color:var(--text);text-decoration:none;letter-spacing:-0.3px}
+.logo span{color:var(--accent)}
+.nav-links{display:flex;gap:1.5rem;font-size:0.88rem;font-weight:500}
+.nav-links a{color:var(--muted);text-decoration:none;transition:color 0.15s}
+.nav-links a:hover{color:var(--text)}
+.breadcrumb{font-size:0.82rem;color:var(--muted);padding:0.8rem 0;display:flex;gap:0.5rem;align-items:center}
+.breadcrumb a{color:var(--muted);text-decoration:none}.breadcrumb a:hover{color:var(--accent)}
+.container{max-width:1100px;margin:0 auto;padding:0 1.5rem}
+.page-wrap{max-width:1100px;margin:0 auto;padding:2rem 1.5rem;display:grid;grid-template-columns:1fr 300px;gap:2rem}
+@media(max-width:800px){.page-wrap{grid-template-columns:1fr}}
+.ad-slot{background:#fff;border:1.5px dashed var(--border);border-radius:8px;display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:0.75rem;font-family:monospace;letter-spacing:.05em;text-transform:uppercase}
+.ad-banner{width:100%;height:90px;margin-bottom:1.5rem}
+.ad-sidebar{width:100%;height:250px}
+.tool-header{margin-bottom:1.5rem}
+.tool-header .icon{font-size:2.2rem;margin-bottom:0.6rem}
+.tool-header h1{font-family:var(--display);font-size:1.9rem;font-weight:700;letter-spacing:-0.5px;line-height:1.2;margin-bottom:0.5rem}
+.tool-header p.intro{color:var(--muted);font-size:0.97rem;line-height:1.7;max-width:640px}
+.tool-body{background:#fff;border:1.5px solid var(--border);border-radius:12px;padding:2rem}
+input[type=datetime-local],select{width:100%;padding:0.75rem 0.9rem;border:1.5px solid var(--border);border-radius:8px;font-family:var(--font);font-size:0.95rem;background:var(--bg);color:var(--text);outline:none}
+input[type=datetime-local]:focus,select:focus{border-color:var(--accent2);background:#fff}
+.input-row{display:flex;gap:0.75rem;flex-wrap:wrap;margin-bottom:1rem}
+.input-group{flex:1;min-width:180px}
+label{display:block;font-size:0.83rem;font-weight:500;color:var(--muted);margin-bottom:0.35rem}
+.btn{padding:.65rem 1.3rem;border:none;border-radius:7px;font-family:var(--display);font-weight:600;font-size:.9rem;cursor:pointer;transition:all .15s}
+.btn-primary{background:var(--text);color:#fff}.btn-primary:hover{background:var(--accent)}
+.result-box{background:var(--bg);border:1.5px solid var(--border);border-radius:8px;padding:1rem 1.1rem;font-size:0.95rem;min-height:60px;white-space:pre-wrap;line-height:1.6}
+.related{margin-top:2rem}
+.related h3{font-family:var(--display);font-size:1.05rem;font-weight:700;margin-bottom:.8rem}
+.related-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:.6rem}
+.related-card{background:#fff;border:1.5px solid var(--border);border-radius:8px;padding:.8rem;text-decoration:none;color:var(--text);display:block;font-size:.85rem;font-weight:500;transition:all .15s}
+.related-card:hover{border-color:var(--accent);color:var(--accent)}
+footer{background:var(--text);color:rgba(255,255,255,.45);text-align:center;padding:2rem 1rem;font-size:.82rem;margin-top:3rem}
+footer a{color:rgba(255,255,255,.6);text-decoration:none}
+footer a:hover{color:#fff}
+</style>
+<script type="application/ld+json">[{"@context":"https://schema.org","@type":"WebApplication","name":"Free Timezone Converter","url":"https://jjafri45.github.io/timezone-converter.html","description":"Convert time between common timezones including UTC, New York, London, Dubai, Karachi, Delhi, Singapore and Sydney. Free timezone converter for meetings and travel.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","browserRequirements":"Requires JavaScript and a modern web browser","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://jjafri45.github.io/"},{"@type":"ListItem","position":2,"name":"Free Timezone Converter","item":"https://jjafri45.github.io/timezone-converter.html"}]}]</script>
+</head>
+<body>
+<nav>
+  <a href="index.html" class="logo">Tool<span>Drop</span></a>
+  <div class="nav-links">
+    <a href="index.html">All Tools</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="privacy.html">Privacy</a>
+  </div>
+</nav>
+<div class="container"><nav class="breadcrumb"><a href="index.html">Home</a> Ã¢â‚¬Âº <span>Converters</span> Ã¢â‚¬Âº <span>Timezone Converter</span></nav></div>
+<div class="page-wrap">
+  <div class="tool-main">
+    <div class="ad-slot ad-banner">[ Ad Ã¢â‚¬â€ 728Ãƒâ€”90 Banner ]</div>
+    <div class="tool-header">
+      <div class="icon">Ã°Å¸â€¢â€™</div>
+      <h1>Free Timezone Converter</h1>
+      <p class="intro">Convert a meeting or travel time from one timezone into another. Useful for remote teams, interviews, client calls, and international scheduling.</p>
+    </div>
+    <div class="tool-body">
+      <div class="input-row">
+        <div class="input-group"><label>Date & Time</label><input type="datetime-local" id="tz-input"></div>
+        <div class="input-group"><label>From Timezone</label><select id="tz-from"></select></div>
+        <div class="input-group"><label>To Timezone</label><select id="tz-to"></select></div>
+      </div>
+      <button class="btn btn-primary" onclick="tzConvert()">Convert</button>
+      <div class="result-box" id="tz-output" style="margin-top:1rem">Pick a date, time, and timezones to convert.</div>
+    </div>
+    <div class="related"><h3>Related Tools</h3><div class="related-grid"><a href="date-calculator.html" class="related-card">Ã°Å¸â€œâ€¦ Date Calculator</a>
+<a href="countdown-timer.html" class="related-card">Ã¢ÂÂ° Countdown Timer</a>
+<a href="stopwatch.html" class="related-card">Ã°Å¸ÂÂ Stopwatch</a>
+</div></div>
+    <div class="ad-slot ad-banner" style="margin-top:1.5rem">[ Ad Ã¢â‚¬â€ 728Ãƒâ€”90 Banner ]</div>
+  </div>
+  <aside>
+    <div class="ad-slot ad-sidebar">[ Ad Ã¢â‚¬â€ 300Ãƒâ€”250 ]</div>
+  </aside>
+</div>
+<script>
+const tzOptions=[
+  ['UTC','UTC'],['America/New_York','New York (ET)'],['America/Los_Angeles','Los Angeles (PT)'],
+  ['Europe/London','London'],['Europe/Berlin','Berlin'],['Asia/Dubai','Dubai'],
+  ['Asia/Karachi','Karachi'],['Asia/Kolkata','Delhi'],['Asia/Singapore','Singapore'],
+  ['Asia/Tokyo','Tokyo'],['Australia/Sydney','Sydney']
+];
+const tzFrom=document.getElementById('tz-from');
+const tzTo=document.getElementById('tz-to');
+tzFrom.innerHTML=tzOptions.map(([v,l])=>`<option value="${v}">${l}</option>`).join('');
+tzTo.innerHTML=tzOptions.map(([v,l])=>`<option value="${v}">${l}</option>`).join('');
+tzFrom.value='UTC';
+tzTo.value='Asia/Karachi';
+document.getElementById('tz-input').value=new Date(Date.now()-new Date().getTimezoneOffset()*60000).toISOString().slice(0,16);
+function tzParts(date, zone){
+  const parts=new Intl.DateTimeFormat('en-US',{timeZone:zone,year:'numeric',month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit',hour12:false}).formatToParts(date);
+  const out={};
+  parts.forEach(p=>{if(p.type!=='literal')out[p.type]=p.value;});
+  return out;
+}
+function tzWallToDate(value, zone){
+  const [datePart,timePart]=value.split('T');
+  const [year,month,day]=datePart.split('-').map(Number);
+  const [hour,minute]=timePart.split(':').map(Number);
+  let utc=Date.UTC(year,month-1,day,hour,minute);
+  for(let i=0;i<3;i++){
+    const p=tzParts(new Date(utc), zone);
+    const seen=Date.UTC(+p.year,+p.month-1,+p.day,+p.hour,+p.minute);
+    const wanted=Date.UTC(year,month-1,day,hour,minute);
+    utc+=wanted-seen;
+  }
+  return new Date(utc);
+}
+function tzFormat(date, zone){
+  return new Intl.DateTimeFormat('en-US',{timeZone:zone,weekday:'short',year:'numeric',month:'long',day:'numeric',hour:'numeric',minute:'2-digit',hour12:true}).format(date);
+}
+function tzConvert(){
+  const value=document.getElementById('tz-input').value;
+  const from=tzFrom.value;
+  const to=tzTo.value;
+  const out=document.getElementById('tz-output');
+  if(!value){out.textContent='Choose a date and time first.';return;}
+  const date=tzWallToDate(value, from);
+  out.textContent=`${tzFormat(date, from)} in ${tzFrom.options[tzFrom.selectedIndex].text}\n${tzFormat(date, to)} in ${tzTo.options[tzTo.selectedIndex].text}`;
+}
+tzConvert();
+</script>
+<footer>
+  <p>&copy; 2026 ToolDrop &nbsp;&middot;&nbsp; <a href="about.html">About</a> &nbsp;&middot;&nbsp; <a href="contact.html">Contact</a> &nbsp;&middot;&nbsp; <a href="privacy.html">Privacy</a> &nbsp;&middot;&nbsp; <a href="terms.html">Terms</a> &nbsp;&middot;&nbsp; <a href="advertising-disclosure.html">Advertising Disclosure</a></p>
+</footer>
+</body>
+</html>

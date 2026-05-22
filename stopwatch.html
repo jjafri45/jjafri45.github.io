@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stopwatch Online Ã¢â‚¬â€œ Free Browser Stopwatch with Lap Timer</title>
+<meta name="description" content="Use a free online stopwatch with lap timer directly in your browser. No download needed.">
+<meta name="keywords" content="stopwatch online, online stopwatch, browser stopwatch, lap timer online">
+<link rel="canonical" href="https://jjafri45.github.io/stopwatch.html">
+<meta property="og:title" content="Stopwatch Online Ã¢â‚¬â€œ Free Browser Stopwatch with Lap Timer">
+<meta property="og:description" content="Use a free online stopwatch with lap timer directly in your browser. No download needed.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://jjafri45.github.io/stopwatch.html">
+<meta property="og:site_name" content="ToolDrop">
+<meta name="twitter:card" content="summary">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="theme-color" content="#111110">
+<!-- Ã¢Å“â€¦ Replace with real AdSense code when approved:
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXX" crossorigin="anonymous"></script>
+-->
+
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Inter:wght@400;450;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f8f8f6;--surface:#fff;--border:#e5e4e0;--text:#111110;
+  --muted:#6b6a66;--accent:#e8410a;--accent2:#1a56db;
+  --font:'Inter',sans-serif;--display:'Outfit',sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--font);background:var(--bg);color:var(--text);font-size:16px;line-height:1.65}
+
+/* NAV */
+nav{background:#fff;border-bottom:1px solid var(--border);padding:0 1.5rem;height:58px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100}
+.logo{font-family:var(--display);font-weight:800;font-size:1.25rem;color:var(--text);text-decoration:none;letter-spacing:-0.3px}
+.logo span{color:var(--accent)}
+.nav-links{display:flex;gap:1.5rem;font-size:0.88rem;font-weight:500}
+.nav-links a{color:var(--muted);text-decoration:none;transition:color 0.15s}
+.nav-links a:hover{color:var(--text)}
+
+/* BREADCRUMB */
+.breadcrumb{font-size:0.82rem;color:var(--muted);padding:0.8rem 0;display:flex;gap:0.5rem;align-items:center}
+.breadcrumb a{color:var(--muted);text-decoration:none}.breadcrumb a:hover{color:var(--accent)}
+
+/* CONTAINER */
+.container{max-width:1100px;margin:0 auto;padding:0 1.5rem}
+.page-wrap{max-width:1100px;margin:0 auto;padding:2rem 1.5rem;display:grid;grid-template-columns:1fr 300px;gap:2rem}
+@media(max-width:800px){.page-wrap{grid-template-columns:1fr}}
+
+/* AD SLOT */
+.ad-slot{background:#fff;border:1.5px dashed var(--border);border-radius:8px;display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:0.75rem;font-family:monospace;letter-spacing:.05em;text-transform:uppercase}
+.ad-banner{width:100%;height:90px;margin-bottom:1.5rem}
+.ad-sidebar{width:100%;height:250px}
+
+/* TOOL CARD */
+.tool-header{margin-bottom:1.5rem}
+.tool-header .icon{font-size:2.2rem;margin-bottom:0.6rem}
+.tool-header h1{font-family:var(--display);font-size:1.9rem;font-weight:700;letter-spacing:-0.5px;line-height:1.2;margin-bottom:0.5rem}
+.tool-header p.intro{color:var(--muted);font-size:0.97rem;line-height:1.7;max-width:640px}
+
+.tool-body{background:#fff;border:1.5px solid var(--border);border-radius:12px;padding:2rem}
+
+/* INPUTS */
+textarea,input[type=text],input[type=number],select{
+  width:100%;padding:0.75rem 0.9rem;border:1.5px solid var(--border);border-radius:8px;
+  font-family:var(--font);font-size:0.95rem;background:var(--bg);color:var(--text);outline:none;transition:border-color .15s
+}
+textarea{min-height:180px;resize:vertical;font-family:monospace;font-size:0.9rem;line-height:1.6}
+textarea:focus,input:focus,select:focus{border-color:var(--accent2);background:#fff}
+.input-row{display:flex;gap:0.75rem;flex-wrap:wrap;margin-bottom:1rem}
+.input-group{flex:1;min-width:130px}
+label{display:block;font-size:0.83rem;font-weight:500;color:var(--muted);margin-bottom:0.35rem}
+
+/* BUTTONS */
+.btn{padding:.65rem 1.3rem;border:none;border-radius:7px;font-family:var(--display);font-weight:600;font-size:.9rem;cursor:pointer;transition:all .15s}
+.btn-primary{background:var(--text);color:#fff}.btn-primary:hover{background:var(--accent)}
+.btn-outline{background:transparent;color:var(--text);border:1.5px solid var(--border)}.btn-outline:hover{border-color:var(--text)}
+.btn-sm{padding:.4rem .85rem;font-size:.8rem}
+.btn-row{display:flex;gap:.5rem;flex-wrap:wrap;margin:1rem 0}
+
+/* RESULTS */
+.result-box{background:var(--bg);border:1.5px solid var(--border);border-radius:8px;padding:1rem 1.1rem;font-family:monospace;font-size:0.9rem;min-height:60px;word-break:break-all;white-space:pre-wrap;line-height:1.6}
+.result-stats{display:flex;gap:.75rem;flex-wrap:wrap;margin:1rem 0}
+.stat-box{flex:1;min-width:90px;background:var(--bg);border-radius:8px;padding:.9rem;text-align:center;border:1.5px solid var(--border)}
+.stat-num{font-family:var(--display);font-size:1.7rem;font-weight:800;color:var(--accent)}
+.stat-label{font-size:.73rem;color:var(--muted);margin-top:.15rem}
+hr.div{border:none;border-top:1.5px solid var(--border);margin:1.2rem 0}
+.copy-row{display:flex;justify-content:space-between;align-items:center;margin-bottom:.5rem}
+.copy-row span{font-size:.82rem;color:var(--muted)}
+
+/* RELATED */
+.related{margin-top:2rem}
+.related h3{font-family:var(--display);font-size:1.05rem;font-weight:700;margin-bottom:.8rem}
+.related-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:.6rem}
+.related-card{background:#fff;border:1.5px solid var(--border);border-radius:8px;padding:.8rem;text-decoration:none;color:var(--text);display:block;font-size:.85rem;font-weight:500;transition:all .15s}
+.related-card:hover{border-color:var(--accent);color:var(--accent)}
+
+/* HOME */
+.hero{background:var(--text);color:#fff;padding:3.5rem 1.5rem 3rem;text-align:center}
+.hero h1{font-family:var(--display);font-size:clamp(2rem,5vw,3.2rem);font-weight:800;letter-spacing:-1px;margin-bottom:.8rem}
+.hero h1 em{color:var(--accent);font-style:normal}
+.hero p{color:rgba(255,255,255,.6);font-size:1rem;max-width:450px;margin:0 auto 1.8rem}
+.search-wrap{max-width:500px;margin:0 auto}
+#search-input{width:100%;padding:.85rem 1.1rem;border-radius:8px;border:2px solid rgba(255,255,255,.15);background:rgba(255,255,255,.08);color:#fff;font-family:var(--font);font-size:1rem;outline:none}
+#search-input::placeholder{color:rgba(255,255,255,.35)}
+#search-input:focus{border-color:var(--accent)}
+
+.cat-bar{display:flex;gap:.5rem;flex-wrap:wrap;padding:1.2rem 1.5rem;max-width:1100px;margin:0 auto}
+.cat-btn{padding:.35rem .9rem;border-radius:20px;border:1.5px solid var(--border);background:#fff;cursor:pointer;font-size:.82rem;font-weight:500;font-family:var(--font);color:var(--text);transition:all .15s}
+.cat-btn.active,.cat-btn:hover{background:var(--text);color:#fff;border-color:var(--text)}
+
+.tools-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:1rem;padding:0 1.5rem 2rem;max-width:1100px;margin:0 auto}
+.tool-card{background:#fff;border:1.5px solid var(--border);border-radius:10px;padding:1.3rem;cursor:pointer;text-decoration:none;color:var(--text);display:block;transition:all .15s}
+.tool-card:hover{border-color:var(--accent);transform:translateY(-2px);box-shadow:0 6px 20px rgba(0,0,0,.07)}
+.card-icon{font-size:1.6rem;margin-bottom:.5rem}
+.card-name{font-family:var(--display);font-weight:700;font-size:.97rem;margin-bottom:.25rem}
+.card-desc{font-size:.8rem;color:var(--muted);line-height:1.5}
+.card-cat{display:inline-block;margin-top:.6rem;font-size:.68rem;background:var(--bg);color:var(--muted);padding:.12rem .45rem;border-radius:3px}
+.no-results{grid-column:1/-1;text-align:center;color:var(--muted);padding:3rem}
+
+/* FOOTER */
+footer{background:var(--text);color:rgba(255,255,255,.45);text-align:center;padding:2rem 1rem;font-size:.82rem;margin-top:3rem}
+footer a{color:rgba(255,255,255,.6);text-decoration:none}
+footer a:hover{color:#fff}
+</style>
+
+<script type="application/ld+json">[{"@context":"https://schema.org","@type":"WebApplication","name":"Free Online Stopwatch with Lap Timer","url":"https://jjafri45.github.io/stopwatch.html","description":"Use a free online stopwatch with lap timer directly in your browser. No download needed.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","browserRequirements":"Requires JavaScript and a modern web browser","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://jjafri45.github.io/"},{"@type":"ListItem","position":2,"name":"Free Online Stopwatch with Lap Timer","item":"https://jjafri45.github.io/stopwatch.html"}]}]</script>
+</head>
+<body>
+<nav>
+  <a href="index.html" class="logo">Tool<span>Drop</span></a>
+  <div class="nav-links">
+    <a href="index.html">All Tools</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="privacy.html">Privacy</a>
+  </div>
+</nav>
+<div class="container"><nav class="breadcrumb"><a href="index.html">Home</a> Ã¢â‚¬Âº <span>Other Tools</span> Ã¢â‚¬Âº <span>Stopwatch</span></nav></div>
+<div class="page-wrap">
+  <div class="tool-main">
+    <div class="ad-slot ad-banner">[ Ad Ã¢â‚¬â€ 728Ãƒâ€”90 Banner ]</div>
+    <div class="tool-header">
+      <div class="icon">Ã°Å¸ÂÂ</div>
+      <h1>Free Online Stopwatch with Lap Timer</h1>
+      <p class="intro">Start, stop, pause, and record laps with this browser-based stopwatch. No app or download required.</p>
+    </div>
+    <div class="tool-body">
+      
+<div style="text-align:center">
+  <div id="sw-d" style="font-family:var(--display);font-size:3.5rem;font-weight:800;margin:1.5rem 0;letter-spacing:4px">00:00.00</div>
+  <div class="btn-row" style="justify-content:center">
+    <button class="btn btn-primary" onclick="swSt()">Start</button>
+    <button class="btn btn-outline" onclick="swSp()">Stop</button>
+    <button class="btn btn-outline" onclick="swR()">Reset</button>
+    <button class="btn btn-outline" onclick="swL()">Lap</button>
+  </div>
+  <div id="sw-laps" style="margin-top:1.5rem;text-align:left;font-family:monospace;font-size:.85rem;max-height:200px;overflow-y:auto"></div>
+</div>
+<script>
+let swT=null,sw0=0,swE=0,swLps=[];
+function swSt(){if(swT)return;sw0=Date.now()-swE;swT=setInterval(()=>{swE=Date.now()-sw0;const m=Math.floor(swE/60000),s=Math.floor((swE%60000)/1000),ms=Math.floor((swE%1000)/10);document.getElementById('sw-d').textContent=String(m).padStart(2,'0')+':'+String(s).padStart(2,'0')+'.'+String(ms).padStart(2,'0');},10);}
+function swSp(){clearInterval(swT);swT=null;}
+function swR(){swSp();swE=0;swLps=[];document.getElementById('sw-d').textContent='00:00.00';document.getElementById('sw-laps').innerHTML='';}
+function swL(){const t=document.getElementById('sw-d').textContent;swLps.push(t);document.getElementById('sw-laps').innerHTML=swLps.map((l,i)=>`<div style="padding:.3rem 0;border-bottom:1px solid var(--border)">Lap ${i+1}: ${l}</div>`).join('');}
+</script>
+    </div>
+    <div class="related"><h3>Related Tools</h3><div class="related-grid"><a href="countdown-timer.html" class="related-card">Ã¢ÂÂ° Countdown Timer</a>
+<a href="coin-flip.html" class="related-card">Ã°Å¸Âªâ„¢ Coin Flip</a>
+<a href="random-number-generator.html" class="related-card">Ã°Å¸Å½Â² Random Number Generator</a>
+</div></div>
+    <div class="ad-slot ad-banner" style="margin-top:1.5rem">[ Ad Ã¢â‚¬â€ 728Ãƒâ€”90 Banner ]</div>
+  </div>
+  <aside>
+    <div class="ad-slot ad-sidebar">[ Ad Ã¢â‚¬â€ 300Ãƒâ€”250 ]</div>
+  </aside>
+</div>
+
+<script>
+function cp(id,btn){const t=document.getElementById(id);navigator.clipboard.writeText(t.innerText||t.value||'');btn.textContent='Copied!';btn.style.color='green';setTimeout(()=>{btn.textContent='Copy';btn.style.color='';},1500);}
+</script>
+<footer>
+  <p>&copy; 2026 ToolDrop &nbsp;&middot;&nbsp; <a href="about.html">About</a> &nbsp;&middot;&nbsp; <a href="contact.html">Contact</a> &nbsp;&middot;&nbsp; <a href="privacy.html">Privacy</a> &nbsp;&middot;&nbsp; <a href="terms.html">Terms</a> &nbsp;&middot;&nbsp; <a href="advertising-disclosure.html">Advertising Disclosure</a></p>
+</footer>
+</body>
+</html>

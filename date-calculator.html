@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Date Calculator - Find Date Differences and Add Days Online</title>
+<meta name="description" content="Calculate the number of days between two dates or add days to a date online. Free browser date calculator for planning, deadlines, travel, and schedules.">
+<meta name="keywords" content="date calculator, days between dates, add days to date, online date difference calculator">
+<link rel="canonical" href="https://jjafri45.github.io/date-calculator.html">
+<meta property="og:title" content="Date Calculator - Find Date Differences and Add Days Online">
+<meta property="og:description" content="Calculate date differences and add or subtract days using a simple browser date calculator.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://jjafri45.github.io/date-calculator.html">
+<meta property="og:site_name" content="ToolDrop">
+<meta name="twitter:card" content="summary">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="theme-color" content="#111110">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Inter:wght@400;450;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f8f8f6;--surface:#fff;--border:#e5e4e0;--text:#111110;
+  --muted:#6b6a66;--accent:#e8410a;--accent2:#1a56db;
+  --font:'Inter',sans-serif;--display:'Outfit',sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--font);background:var(--bg);color:var(--text);font-size:16px;line-height:1.65}
+nav{background:#fff;border-bottom:1px solid var(--border);padding:0 1.5rem;height:58px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100}
+.logo{font-family:var(--display);font-weight:800;font-size:1.25rem;color:var(--text);text-decoration:none;letter-spacing:-0.3px}
+.logo span{color:var(--accent)}
+.nav-links{display:flex;gap:1.5rem;font-size:0.88rem;font-weight:500}
+.nav-links a{color:var(--muted);text-decoration:none;transition:color 0.15s}
+.nav-links a:hover{color:var(--text)}
+.breadcrumb{font-size:0.82rem;color:var(--muted);padding:0.8rem 0;display:flex;gap:0.5rem;align-items:center}
+.breadcrumb a{color:var(--muted);text-decoration:none}.breadcrumb a:hover{color:var(--accent)}
+.container{max-width:1100px;margin:0 auto;padding:0 1.5rem}
+.page-wrap{max-width:1100px;margin:0 auto;padding:2rem 1.5rem;display:grid;grid-template-columns:1fr 300px;gap:2rem}
+@media(max-width:800px){.page-wrap{grid-template-columns:1fr}}
+.ad-slot{background:#fff;border:1.5px dashed var(--border);border-radius:8px;display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:0.75rem;font-family:monospace;letter-spacing:.05em;text-transform:uppercase}
+.ad-banner{width:100%;height:90px;margin-bottom:1.5rem}
+.ad-sidebar{width:100%;height:250px}
+.tool-header{margin-bottom:1.5rem}
+.tool-header .icon{font-size:2.2rem;margin-bottom:0.6rem}
+.tool-header h1{font-family:var(--display);font-size:1.9rem;font-weight:700;letter-spacing:-0.5px;line-height:1.2;margin-bottom:0.5rem}
+.tool-header p.intro{color:var(--muted);font-size:0.97rem;line-height:1.7;max-width:640px}
+.tool-body{background:#fff;border:1.5px solid var(--border);border-radius:12px;padding:2rem}
+input[type=date],input[type=number]{width:100%;padding:0.75rem 0.9rem;border:1.5px solid var(--border);border-radius:8px;font-family:var(--font);font-size:0.95rem;background:var(--bg);color:var(--text);outline:none}
+input[type=date]:focus,input[type=number]:focus{border-color:var(--accent2);background:#fff}
+.input-row{display:flex;gap:0.75rem;flex-wrap:wrap;margin-bottom:1rem}
+.input-group{flex:1;min-width:180px}
+label{display:block;font-size:0.83rem;font-weight:500;color:var(--muted);margin-bottom:0.35rem}
+.btn{padding:.65rem 1.3rem;border:none;border-radius:7px;font-family:var(--display);font-weight:600;font-size:.9rem;cursor:pointer;transition:all .15s}
+.btn-primary{background:var(--text);color:#fff}.btn-primary:hover{background:var(--accent)}
+.result-box{background:var(--bg);border:1.5px solid var(--border);border-radius:8px;padding:1rem 1.1rem;font-family:monospace;font-size:0.92rem;min-height:60px;white-space:pre-wrap;line-height:1.6}
+.section-title{font-family:var(--display);font-size:1rem;font-weight:700;margin:1rem 0 0.75rem}
+.related{margin-top:2rem}
+.related h3{font-family:var(--display);font-size:1.05rem;font-weight:700;margin-bottom:.8rem}
+.related-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:.6rem}
+.related-card{background:#fff;border:1.5px solid var(--border);border-radius:8px;padding:.8rem;text-decoration:none;color:var(--text);display:block;font-size:.85rem;font-weight:500;transition:all .15s}
+.related-card:hover{border-color:var(--accent);color:var(--accent)}
+footer{background:var(--text);color:rgba(255,255,255,.45);text-align:center;padding:2rem 1rem;font-size:.82rem;margin-top:3rem}
+footer a{color:rgba(255,255,255,.6);text-decoration:none}
+footer a:hover{color:#fff}
+</style>
+<script type="application/ld+json">[{"@context":"https://schema.org","@type":"WebApplication","name":"Free Date Calculator","url":"https://jjafri45.github.io/date-calculator.html","description":"Calculate the number of days between two dates or add days to a date online. Free browser date calculator for planning, deadlines, travel, and schedules.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","browserRequirements":"Requires JavaScript and a modern web browser","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://jjafri45.github.io/"},{"@type":"ListItem","position":2,"name":"Free Date Calculator","item":"https://jjafri45.github.io/date-calculator.html"}]}]</script>
+</head>
+<body>
+<nav>
+  <a href="index.html" class="logo">Tool<span>Drop</span></a>
+  <div class="nav-links">
+    <a href="index.html">All Tools</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="privacy.html">Privacy</a>
+  </div>
+</nav>
+<div class="container"><nav class="breadcrumb"><a href="index.html">Home</a> Ã¢â‚¬Âº <span>Calculators</span> Ã¢â‚¬Âº <span>Date Calculator</span></nav></div>
+<div class="page-wrap">
+  <div class="tool-main">
+    <div class="ad-slot ad-banner">[ Ad Ã¢â‚¬â€ 728Ãƒâ€”90 Banner ]</div>
+    <div class="tool-header">
+      <div class="icon">Ã°Å¸â€œâ€¦</div>
+      <h1>Free Date Calculator</h1>
+      <p class="intro">Find the number of days between two dates or quickly add and subtract days for deadlines, contracts, travel, and project planning.</p>
+    </div>
+    <div class="tool-body">
+      <div class="section-title">Days Between Dates</div>
+      <div class="input-row">
+        <div class="input-group"><label>Start Date</label><input type="date" id="dc-start"></div>
+        <div class="input-group"><label>End Date</label><input type="date" id="dc-end"></div>
+      </div>
+      <button class="btn btn-primary" onclick="dcDiff()">Calculate Difference</button>
+      <div class="result-box" id="dc-diff" style="margin-top:1rem">Choose two dates to compare.</div>
+      <div class="section-title">Add or Subtract Days</div>
+      <div class="input-row">
+        <div class="input-group"><label>Base Date</label><input type="date" id="dc-base"></div>
+        <div class="input-group"><label>Days (+/-)</label><input type="number" id="dc-days" value="30"></div>
+      </div>
+      <button class="btn btn-primary" onclick="dcAdd()">Calculate New Date</button>
+      <div class="result-box" id="dc-add" style="margin-top:1rem">Pick a base date and day offset.</div>
+    </div>
+    <div class="related"><h3>Related Tools</h3><div class="related-grid"><a href="age-calculator.html" class="related-card">Ã°Å¸Å½â€š Age Calculator</a>
+<a href="countdown-timer.html" class="related-card">Ã¢ÂÂ° Countdown Timer</a>
+<a href="timezone-converter.html" class="related-card">Ã°Å¸â€¢â€™ Timezone Converter</a>
+</div></div>
+    <div class="ad-slot ad-banner" style="margin-top:1.5rem">[ Ad Ã¢â‚¬â€ 728Ãƒâ€”90 Banner ]</div>
+  </div>
+  <aside>
+    <div class="ad-slot ad-sidebar">[ Ad Ã¢â‚¬â€ 300Ãƒâ€”250 ]</div>
+  </aside>
+</div>
+<script>
+function dcParse(id){const value=document.getElementById(id).value;return value?new Date(value+'T00:00:00'):null;}
+function dcFormat(date){return date.toLocaleDateString(undefined,{year:'numeric',month:'long',day:'numeric'});}
+function dcDiff(){
+  const start=dcParse('dc-start');
+  const end=dcParse('dc-end');
+  const out=document.getElementById('dc-diff');
+  if(!start || !end){out.textContent='Select both dates first.';return;}
+  const days=Math.round((end-start)/86400000);
+  out.textContent=`Difference: ${Math.abs(days)} day(s)${days<0?' (end date is earlier)':''}\nWeeks: ${(Math.abs(days)/7).toFixed(2)}`;
+}
+function dcAdd(){
+  const base=dcParse('dc-base');
+  const offset=parseInt(document.getElementById('dc-days').value,10);
+  const out=document.getElementById('dc-add');
+  if(!base || Number.isNaN(offset)){out.textContent='Choose a base date and enter a valid day count.';return;}
+  const next=new Date(base);
+  next.setDate(next.getDate()+offset);
+  out.textContent=`New date: ${dcFormat(next)}`;
+}
+</script>
+<footer>
+  <p>&copy; 2026 ToolDrop &nbsp;&middot;&nbsp; <a href="about.html">About</a> &nbsp;&middot;&nbsp; <a href="contact.html">Contact</a> &nbsp;&middot;&nbsp; <a href="privacy.html">Privacy</a> &nbsp;&middot;&nbsp; <a href="terms.html">Terms</a> &nbsp;&middot;&nbsp; <a href="advertising-disclosure.html">Advertising Disclosure</a></p>
+</footer>
+</body>
+</html>

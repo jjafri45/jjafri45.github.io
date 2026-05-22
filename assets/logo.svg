@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">ToolDrop logo</title>
+  <desc id="desc">A rounded square logo with the letters TD.</desc>
+  <rect width="512" height="512" rx="96" fill="#111110"/>
+  <rect x="64" y="64" width="384" height="384" rx="72" fill="#e8410a"/>
+  <path d="M152 176h208v48h-80v160h-48V224h-80z" fill="#fff"/>
+  <path d="M176 272h48c53 0 96 35 96 80s-43 80-96 80h-48zm48 48v64c26 0 48-14 48-32s-22-32-48-32z" fill="#fff"/>
+</svg>
