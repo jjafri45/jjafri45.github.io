@@ -4,23 +4,20 @@
 <script src="https://quge5.com/88/tag.min.js" data-zone="242094" async data-cfasync="false"></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Age Calculator Ã¢â‚¬â€œ Find Your Exact Age Online</title>
-<meta name="description" content="Calculate your exact age in years, months, and days from your date of birth. Free online age calculator Ã¢â‚¬â€œ instant results.">
-<meta name="keywords" content="age calculator, how old am I, calculate age from date of birth, exact age calculator">
+<title>Age Calculator | Exact Age in Years, Months and Days</title>
+<meta name="description" content="Calculate exact age in years, months, and days with a free online age calculator for birthdays, forms, planning, and quick date checks.">
+<meta name="keywords" content="age calculator, calculate age online, birthday age tool, age in years months days">
 <link rel="canonical" href="https://jjafri45.github.io/age-calculator.html">
-<meta property="og:title" content="Age Calculator Ã¢â‚¬â€œ Find Your Exact Age Online">
-<meta property="og:description" content="Calculate your exact age in years, months, and days from your date of birth. Free online age calculator Ã¢â‚¬â€œ instant results.">
+<meta property="og:title" content="Age Calculator | Exact Age in Years, Months and Days">
+<meta property="og:description" content="Calculate exact age in years, months, and days with a free online age calculator for birthdays, forms, planning, and quick date checks.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://jjafri45.github.io/age-calculator.html">
 <meta property="og:site_name" content="ToolDrop">
 <meta name="twitter:card" content="summary">
 <meta name="robots" content="index, follow, max-image-preview:large">
 <meta name="theme-color" content="#111110">
-<!-- Ã¢Å“â€¦ Replace with real AdSense code when approved:
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXX" crossorigin="anonymous"></script>
--->
-
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Inter:wght@400;450;500&display=swap" rel="stylesheet">
 <style>
@@ -32,102 +29,70 @@
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
 body{font-family:var(--font);background:var(--bg);color:var(--text);font-size:16px;line-height:1.65}
-
-/* NAV */
 nav{background:#fff;border-bottom:1px solid var(--border);padding:0 1.5rem;height:58px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100}
-.logo{font-family:var(--display);font-weight:800;font-size:1.25rem;color:var(--text);text-decoration:none;letter-spacing:-0.3px}
+.logo{font-family:var(--display);font-weight:800;font-size:1.25rem;color:var(--text);text-decoration:none}
 .logo span{color:var(--accent)}
-.nav-links{display:flex;gap:1.5rem;font-size:0.88rem;font-weight:500}
-.nav-links a{color:var(--muted);text-decoration:none;transition:color 0.15s}
+.nav-links{display:flex;gap:1.5rem;font-size:.88rem;font-weight:500}
+.nav-links a{color:var(--muted);text-decoration:none}
 .nav-links a:hover{color:var(--text)}
-
-/* BREADCRUMB */
-.breadcrumb{font-size:0.82rem;color:var(--muted);padding:0.8rem 0;display:flex;gap:0.5rem;align-items:center}
-.breadcrumb a{color:var(--muted);text-decoration:none}.breadcrumb a:hover{color:var(--accent)}
-
-/* CONTAINER */
+.breadcrumb{font-size:.82rem;color:var(--muted);padding:.8rem 0;display:flex;gap:.5rem;align-items:center}
+.breadcrumb a{color:var(--muted);text-decoration:none}
+.breadcrumb a:hover{color:var(--accent)}
 .container{max-width:1100px;margin:0 auto;padding:0 1.5rem}
 .page-wrap{max-width:1100px;margin:0 auto;padding:2rem 1.5rem;display:grid;grid-template-columns:1fr 300px;gap:2rem}
-@media(max-width:800px){.page-wrap{grid-template-columns:1fr}}
-
-/* AD SLOT */
-.ad-slot{background:#fff;border:1.5px dashed var(--border);border-radius:8px;display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:0.75rem;font-family:monospace;letter-spacing:.05em;text-transform:uppercase}
+@media(max-width:800px){.page-wrap{grid-template-columns:1fr}.nav-links{gap:.9rem;font-size:.8rem}}
+.ad-slot{background:#fff;border:1.5px dashed var(--border);border-radius:8px;display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:.75rem;font-family:monospace;letter-spacing:.05em;text-transform:uppercase}
 .ad-banner{width:100%;height:90px;margin-bottom:1.5rem}
 .ad-sidebar{width:100%;height:250px}
-
-/* TOOL CARD */
 .tool-header{margin-bottom:1.5rem}
-.tool-header .icon{font-size:2.2rem;margin-bottom:0.6rem}
-.tool-header h1{font-family:var(--display);font-size:1.9rem;font-weight:700;letter-spacing:-0.5px;line-height:1.2;margin-bottom:0.5rem}
-.tool-header p.intro{color:var(--muted);font-size:0.97rem;line-height:1.7;max-width:640px}
-
-.tool-body{background:#fff;border:1.5px solid var(--border);border-radius:12px;padding:2rem}
-
-/* INPUTS */
-textarea,input[type=text],input[type=number],select{
-  width:100%;padding:0.75rem 0.9rem;border:1.5px solid var(--border);border-radius:8px;
-  font-family:var(--font);font-size:0.95rem;background:var(--bg);color:var(--text);outline:none;transition:border-color .15s
-}
-textarea{min-height:180px;resize:vertical;font-family:monospace;font-size:0.9rem;line-height:1.6}
-textarea:focus,input:focus,select:focus{border-color:var(--accent2);background:#fff}
-.input-row{display:flex;gap:0.75rem;flex-wrap:wrap;margin-bottom:1rem}
-.input-group{flex:1;min-width:130px}
-label{display:block;font-size:0.83rem;font-weight:500;color:var(--muted);margin-bottom:0.35rem}
-
-/* BUTTONS */
+.tool-header .icon{font-size:2rem;margin-bottom:.55rem}
+.tool-header h1{font-family:var(--display);font-size:1.9rem;font-weight:700;line-height:1.2;margin-bottom:.5rem}
+.tool-header p.intro{color:var(--muted);font-size:.97rem;line-height:1.7;max-width:700px}
+.tool-body,.info-card,.faq-item{background:#fff;border:1.5px solid var(--border);border-radius:12px}
+.tool-body{padding:2rem}
+.info-grid,.faq-grid{display:grid;grid-template-columns:1fr;gap:1rem;margin-top:1.5rem}
+.info-card,.faq-item{padding:1.2rem 1.25rem}
+.info-card h2,.faq-title{font-family:var(--display);font-size:1rem;margin-bottom:.45rem}
+.info-card p,.info-card li,.faq-item p{color:var(--muted);font-size:.94rem;line-height:1.7}
+.info-card ul{padding-left:1.15rem}
 .btn{padding:.65rem 1.3rem;border:none;border-radius:7px;font-family:var(--display);font-weight:600;font-size:.9rem;cursor:pointer;transition:all .15s}
-.btn-primary{background:var(--text);color:#fff}.btn-primary:hover{background:var(--accent)}
-.btn-outline{background:transparent;color:var(--text);border:1.5px solid var(--border)}.btn-outline:hover{border-color:var(--text)}
-.btn-sm{padding:.4rem .85rem;font-size:.8rem}
-.btn-row{display:flex;gap:.5rem;flex-wrap:wrap;margin:1rem 0}
-
-/* RESULTS */
-.result-box{background:var(--bg);border:1.5px solid var(--border);border-radius:8px;padding:1rem 1.1rem;font-family:monospace;font-size:0.9rem;min-height:60px;word-break:break-all;white-space:pre-wrap;line-height:1.6}
+.btn-primary{background:var(--text);color:#fff}
+.btn-primary:hover{background:var(--accent)}
+.btn-outline{background:transparent;color:var(--text);border:1.5px solid var(--border)}
+.btn-outline:hover{border-color:var(--text)}
+.btn-row{display:flex;gap:.6rem;flex-wrap:wrap;margin:1rem 0}
+textarea,input[type=text],input[type=number],input[type=date],select{
+  width:100%;padding:.78rem .92rem;border:1.5px solid var(--border);border-radius:8px;
+  font-family:var(--font);font-size:.95rem;background:var(--bg);color:var(--text);outline:none
+}
+textarea{min-height:170px;resize:vertical}
+textarea:focus,input:focus,select:focus{border-color:var(--accent2);background:#fff}
+.input-row{display:flex;gap:.75rem;flex-wrap:wrap;margin-bottom:1rem}
+.input-group{flex:1;min-width:140px}
+label{display:block;font-size:.83rem;font-weight:500;color:var(--muted);margin-bottom:.35rem}
+.result-box{background:var(--bg);border:1.5px solid var(--border);border-radius:8px;padding:1rem 1.1rem;font-size:.94rem;line-height:1.65;min-height:62px;white-space:pre-wrap;word-break:break-word}
 .result-stats{display:flex;gap:.75rem;flex-wrap:wrap;margin:1rem 0}
-.stat-box{flex:1;min-width:90px;background:var(--bg);border-radius:8px;padding:.9rem;text-align:center;border:1.5px solid var(--border)}
-.stat-num{font-family:var(--display);font-size:1.7rem;font-weight:800;color:var(--accent)}
-.stat-label{font-size:.73rem;color:var(--muted);margin-top:.15rem}
-hr.div{border:none;border-top:1.5px solid var(--border);margin:1.2rem 0}
-.copy-row{display:flex;justify-content:space-between;align-items:center;margin-bottom:.5rem}
-.copy-row span{font-size:.82rem;color:var(--muted)}
-
-/* RELATED */
+.stat-box{flex:1;min-width:92px;background:var(--bg);border:1.5px solid var(--border);border-radius:8px;padding:.85rem;text-align:center}
+.stat-num{font-family:var(--display);font-size:1.45rem;font-weight:800;color:var(--accent)}
+.stat-label{font-size:.73rem;color:var(--muted);margin-top:.12rem}
+.muted{font-size:.85rem;color:var(--muted);margin-top:.7rem}
 .related{margin-top:2rem}
-.related h3{font-family:var(--display);font-size:1.05rem;font-weight:700;margin-bottom:.8rem}
+.related h3,.faq-heading{font-family:var(--display);font-size:1.05rem;font-weight:700;margin-bottom:.8rem}
 .related-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:.6rem}
-.related-card{background:#fff;border:1.5px solid var(--border);border-radius:8px;padding:.8rem;text-decoration:none;color:var(--text);display:block;font-size:.85rem;font-weight:500;transition:all .15s}
+@media(max-width:700px){.related-grid{grid-template-columns:1fr}}
+.related-card{background:#fff;border:1.5px solid var(--border);border-radius:8px;padding:.8rem;text-decoration:none;color:var(--text);display:block;font-size:.85rem;font-weight:500}
 .related-card:hover{border-color:var(--accent);color:var(--accent)}
-
-/* HOME */
-.hero{background:var(--text);color:#fff;padding:3.5rem 1.5rem 3rem;text-align:center}
-.hero h1{font-family:var(--display);font-size:clamp(2rem,5vw,3.2rem);font-weight:800;letter-spacing:-1px;margin-bottom:.8rem}
-.hero h1 em{color:var(--accent);font-style:normal}
-.hero p{color:rgba(255,255,255,.6);font-size:1rem;max-width:450px;margin:0 auto 1.8rem}
-.search-wrap{max-width:500px;margin:0 auto}
-#search-input{width:100%;padding:.85rem 1.1rem;border-radius:8px;border:2px solid rgba(255,255,255,.15);background:rgba(255,255,255,.08);color:#fff;font-family:var(--font);font-size:1rem;outline:none}
-#search-input::placeholder{color:rgba(255,255,255,.35)}
-#search-input:focus{border-color:var(--accent)}
-
-.cat-bar{display:flex;gap:.5rem;flex-wrap:wrap;padding:1.2rem 1.5rem;max-width:1100px;margin:0 auto}
-.cat-btn{padding:.35rem .9rem;border-radius:20px;border:1.5px solid var(--border);background:#fff;cursor:pointer;font-size:.82rem;font-weight:500;font-family:var(--font);color:var(--text);transition:all .15s}
-.cat-btn.active,.cat-btn:hover{background:var(--text);color:#fff;border-color:var(--text)}
-
-.tools-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:1rem;padding:0 1.5rem 2rem;max-width:1100px;margin:0 auto}
-.tool-card{background:#fff;border:1.5px solid var(--border);border-radius:10px;padding:1.3rem;cursor:pointer;text-decoration:none;color:var(--text);display:block;transition:all .15s}
-.tool-card:hover{border-color:var(--accent);transform:translateY(-2px);box-shadow:0 6px 20px rgba(0,0,0,.07)}
-.card-icon{font-size:1.6rem;margin-bottom:.5rem}
-.card-name{font-family:var(--display);font-weight:700;font-size:.97rem;margin-bottom:.25rem}
-.card-desc{font-size:.8rem;color:var(--muted);line-height:1.5}
-.card-cat{display:inline-block;margin-top:.6rem;font-size:.68rem;background:var(--bg);color:var(--muted);padding:.12rem .45rem;border-radius:3px}
-.no-results{grid-column:1/-1;text-align:center;color:var(--muted);padding:3rem}
-
-/* FOOTER */
+.calc-buttons{display:grid;grid-template-columns:repeat(4,1fr);gap:.65rem}
+.calc-btn{padding:.95rem;border:1.5px solid var(--border);border-radius:10px;background:var(--bg);color:var(--text);font-family:var(--display);font-size:1rem;font-weight:700;cursor:pointer}
+.calc-btn:hover{border-color:var(--accent);background:#fff}
+.calc-btn.primary{background:var(--text);color:#fff;border-color:var(--text)}
+.calc-btn.primary:hover{background:var(--accent);border-color:var(--accent)}
+.calc-btn.wide{grid-column:span 2}
 footer{background:var(--text);color:rgba(255,255,255,.45);text-align:center;padding:2rem 1rem;font-size:.82rem;margin-top:3rem}
 footer a{color:rgba(255,255,255,.6);text-decoration:none}
 footer a:hover{color:#fff}
 </style>
-
-<script type="application/ld+json">[{"@context":"https://schema.org","@type":"WebApplication","name":"Free Online Age Calculator","url":"https://jjafri45.github.io/age-calculator.html","description":"Calculate your exact age in years, months, and days from your date of birth. Free online age calculator Ã¢â‚¬â€œ instant results.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","browserRequirements":"Requires JavaScript and a modern web browser","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://jjafri45.github.io/"},{"@type":"ListItem","position":2,"name":"Free Online Age Calculator","item":"https://jjafri45.github.io/age-calculator.html"}]}]</script>
+<script type="application/ld+json">[{"@context":"https://schema.org","@type":"WebApplication","name":"Free Online Age Calculator","url":"https://jjafri45.github.io/age-calculator.html","description":"Calculate exact age in years, months, and days with a free online age calculator for birthdays, forms, planning, and quick date checks.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","browserRequirements":"Requires JavaScript and a modern web browser","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://jjafri45.github.io/"},{"@type":"ListItem","position":2,"name":"Free Online Age Calculator","item":"https://jjafri45.github.io/age-calculator.html"}]},{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Can I calculate age on a date in the future?","acceptedAnswer":{"@type":"Answer","text":"Yes. Set the as-of date to any future date to see the age on that day."}},{"@type":"Question","name":"Why not just subtract birth year from current year?","acceptedAnswer":{"@type":"Answer","text":"Because exact age depends on whether the birthday has already occurred in the selected year."}},{"@type":"Question","name":"Does this avoid timezone issues?","acceptedAnswer":{"@type":"Answer","text":"Yes. It uses structured date inputs and local date math instead of parsing free-form date strings."}}]}]</script>
 </head>
 <body>
 <nav>
@@ -139,51 +104,71 @@ footer a:hover{color:#fff}
     <a href="privacy.html">Privacy</a>
   </div>
 </nav>
-<div class="container"><nav class="breadcrumb"><a href="index.html">Home</a> Ã¢â‚¬Âº <span>Calculators</span> Ã¢â‚¬Âº <span>Age Calculator</span></nav></div>
+<div class="container"><nav class="breadcrumb"><a href="index.html">Home</a><span>&gt;</span><span>Calculators</span><span>&gt;</span><span>Age Calculator</span></nav></div>
 <div class="page-wrap">
   <div class="tool-main">
-    <div class="ad-slot ad-banner">[ Ad Ã¢â‚¬â€ 728Ãƒâ€”90 Banner ]</div>
+    <div class="ad-slot ad-banner">[ Ad - 728x90 Banner ]</div>
     <div class="tool-header">
-      <div class="icon">Ã°Å¸Å½â€š</div>
+      <div class="icon">Age</div>
       <h1>Free Online Age Calculator</h1>
-      <p class="intro">Enter your date of birth to calculate your exact age in years, months, and days. Also shows your total days lived.</p>
+      <p class="intro">Calculate exact age in years, months, and days from a date of birth. Useful for forms, birthdays, planning, eligibility checks, and quick personal date calculations.</p>
     </div>
     <div class="tool-body">
       
 <div class="input-row">
-  <div class="input-group"><label>Date of Birth</label><input type="text" id="ac-d" placeholder="YYYY-MM-DD e.g. 1995-06-15"></div>
-  <div class="input-group" style="display:flex;align-items:flex-end"><button class="btn btn-primary" onclick="acC()" style="width:100%">Calculate Age</button></div>
+  <div class="input-group"><label>Date of birth</label><input type="date" id="age-dob"></div>
+  <div class="input-group"><label>As of date</label><input type="date" id="age-asof"></div>
 </div>
-<div class="result-stats">
-  <div class="stat-box"><div class="stat-num" id="ac-y">Ã¢â‚¬â€</div><div class="stat-label">Years</div></div>
-  <div class="stat-box"><div class="stat-num" id="ac-m">Ã¢â‚¬â€</div><div class="stat-label">Months</div></div>
-  <div class="stat-box"><div class="stat-num" id="ac-d2">Ã¢â‚¬â€</div><div class="stat-label">Days</div></div>
-</div>
-<div class="result-box" id="ac-o" style="text-align:center;font-size:1rem"></div>
-<script>
-function acC(){const dob=new Date(document.getElementById('ac-d').value);
-if(isNaN(dob)){document.getElementById('ac-o').textContent='Invalid date. Use YYYY-MM-DD';return;}
-const now=new Date();let y=now.getFullYear()-dob.getFullYear(),m=now.getMonth()-dob.getMonth(),d=now.getDate()-dob.getDate();
-if(d<0){m--;d+=new Date(now.getFullYear(),now.getMonth(),0).getDate();}
-if(m<0){y--;m+=12;}
-const td=Math.floor((now-dob)/86400000);
-document.getElementById('ac-y').textContent=y;document.getElementById('ac-m').textContent=m;document.getElementById('ac-d2').textContent=d;
-document.getElementById('ac-o').textContent=`You are ${y} years, ${m} months, and ${d} days old Ã¢â‚¬â€ ${td.toLocaleString()} total days.`;}
-</script>
+<div class="btn-row"><button class="btn btn-primary" onclick="calculateAge()">Calculate age</button></div>
+<div class="result-box" id="age-output">Select dates to calculate age.</div>
+
     </div>
-    <div class="related"><h3>Related Tools</h3><div class="related-grid"><a href="bmi-calculator.html" class="related-card">Ã¢Å¡â€“Ã¯Â¸Â BMI Calculator</a>
-<a href="percentage-calculator.html" class="related-card">Ã°Å¸â€™Â¯ Percentage Calculator</a>
-<a href="countdown-timer.html" class="related-card">Ã¢ÂÂ° Countdown Timer</a>
-</div></div>
-    <div class="ad-slot ad-banner" style="margin-top:1.5rem">[ Ad Ã¢â‚¬â€ 728Ãƒâ€”90 Banner ]</div>
+    <div class="related"><h3>Related Tools</h3><div class="related-grid"><a href="date-calculator.html" class="related-card">Date Calculator</a></div></div>
+    <div class="info-grid">
+      <section class="info-card"><h2>What this age calculator does</h2><p>The page computes age from a birth date to a selected as-of date using structured local date values. That avoids the timezone and browser parsing issues that often happen with free-text date inputs.</p></section><section class="info-card"><h2>Examples and use cases</h2><p>The tool is useful anywhere an exact age is needed rather than a rough birth year subtraction.</p><ul><li>checking form requirements</li><li>working out exact age on a specific date</li><li>planning birthday milestones</li><li>reviewing eligibility cutoffs for classes or programs</li></ul></section><section class="info-card"><h2>Short explanation</h2><p>Exact age depends on whether the birthday has occurred yet in the selected year. That is why the calculator reports years, months, and days instead of only total years.</p></section>
+    </div>
+    
+    <section class="faq-grid">
+      <h2 class="faq-heading">Frequently asked questions</h2>
+      <article class="faq-item"><div class="faq-title">Can I calculate age on a date in the future?</div><p>Yes. Set the as-of date to any future date to see the age on that day.</p></article><article class="faq-item"><div class="faq-title">Why not just subtract birth year from current year?</div><p>Because exact age depends on whether the birthday has already occurred in the selected year.</p></article><article class="faq-item"><div class="faq-title">Does this avoid timezone issues?</div><p>Yes. It uses structured date inputs and local date math instead of parsing free-form date strings.</p></article>
+    </section>
+  
+    <div class="ad-slot ad-banner" style="margin-top:1.5rem">[ Ad - 728x90 Banner ]</div>
   </div>
   <aside>
-    <div class="ad-slot ad-sidebar">[ Ad Ã¢â‚¬â€ 300Ãƒâ€”250 ]</div>
+    <div class="ad-slot ad-sidebar">[ Ad - 300x250 ]</div>
   </aside>
 </div>
-
 <script>
-function cp(id,btn){const t=document.getElementById(id);navigator.clipboard.writeText(t.innerText||t.value||'');btn.textContent='Copied!';btn.style.color='green';setTimeout(()=>{btn.textContent='Copy';btn.style.color='';},1500);}
+
+const ageToday = new Date().toISOString().slice(0,10);
+document.getElementById('age-asof').value = ageToday;
+function parts(id){
+  const [year, month, day] = document.getElementById(id).value.split('-').map(Number);
+  return { year, month, day };
+}
+function calculateAge(){
+  const dobValue = document.getElementById('age-dob').value;
+  const asOfValue = document.getElementById('age-asof').value;
+  if(!dobValue || !asOfValue){ document.getElementById('age-output').textContent = 'Select both dates first.'; return; }
+  let { year: by, month: bm, day: bd } = parts('age-dob');
+  let { year: ay, month: am, day: ad } = parts('age-asof');
+  if(new Date(ay, am - 1, ad) < new Date(by, bm - 1, bd)){ document.getElementById('age-output').textContent = 'As-of date must be on or after date of birth.'; return; }
+  let years = ay - by;
+  let months = am - bm;
+  let days = ad - bd;
+  if(days < 0){
+    const prevMonthDays = new Date(ay, am - 1, 0).getDate();
+    days += prevMonthDays;
+    months -= 1;
+  }
+  if(months < 0){
+    months += 12;
+    years -= 1;
+  }
+  document.getElementById('age-output').textContent = years + ' year(s), ' + months + ' month(s), and ' + days + ' day(s).';
+}
+
 </script>
 <footer>
   <p>&copy; 2026 ToolDrop &nbsp;&middot;&nbsp; <a href="about.html">About</a> &nbsp;&middot;&nbsp; <a href="contact.html">Contact</a> &nbsp;&middot;&nbsp; <a href="privacy.html">Privacy</a> &nbsp;&middot;&nbsp; <a href="terms.html">Terms</a> &nbsp;&middot;&nbsp; <a href="advertising-disclosure.html">Advertising Disclosure</a></p>

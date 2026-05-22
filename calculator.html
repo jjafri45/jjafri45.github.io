@@ -4,12 +4,12 @@
 <script src="https://quge5.com/88/tag.min.js" data-zone="242094" async data-cfasync="false"></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Online Calculator - Free Basic Calculator for Daily Math</title>
-<meta name="description" content="Use a free online calculator for quick math, percentages, decimals, and brackets. Fast basic calculator that works in your browser with no signup required.">
-<meta name="keywords" content="online calculator, basic calculator, free calculator, simple calculator, browser calculator">
+<title>Online Calculator | Free Basic Calculator for Daily Math</title>
+<meta name="description" content="Use a free online calculator for quick math, percentages, decimals, and grouped expressions. Fast browser calculator for daily calculations.">
+<meta name="keywords" content="online calculator, basic calculator, percentage calculator, daily math tool">
 <link rel="canonical" href="https://jjafri45.github.io/calculator.html">
-<meta property="og:title" content="Online Calculator - Free Basic Calculator for Daily Math">
-<meta property="og:description" content="Use a free online calculator for quick math, percentages, decimals, and brackets directly in your browser.">
+<meta property="og:title" content="Online Calculator | Free Basic Calculator for Daily Math">
+<meta property="og:description" content="Use a free online calculator for quick math, percentages, decimals, and grouped expressions. Fast browser calculator for daily calculations.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://jjafri45.github.io/calculator.html">
 <meta property="og:site_name" content="ToolDrop">
@@ -17,6 +17,7 @@
 <meta name="robots" content="index, follow, max-image-preview:large">
 <meta name="theme-color" content="#111110">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Inter:wght@400;450;500&display=swap" rel="stylesheet">
 <style>
@@ -29,66 +30,69 @@
 html{scroll-behavior:smooth}
 body{font-family:var(--font);background:var(--bg);color:var(--text);font-size:16px;line-height:1.65}
 nav{background:#fff;border-bottom:1px solid var(--border);padding:0 1.5rem;height:58px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100}
-.logo{font-family:var(--display);font-weight:800;font-size:1.25rem;color:var(--text);text-decoration:none;letter-spacing:-0.3px}
+.logo{font-family:var(--display);font-weight:800;font-size:1.25rem;color:var(--text);text-decoration:none}
 .logo span{color:var(--accent)}
-.nav-links{display:flex;gap:1.5rem;font-size:0.88rem;font-weight:500}
-.nav-links a{color:var(--muted);text-decoration:none;transition:color 0.15s}
+.nav-links{display:flex;gap:1.5rem;font-size:.88rem;font-weight:500}
+.nav-links a{color:var(--muted);text-decoration:none}
 .nav-links a:hover{color:var(--text)}
-.breadcrumb{font-size:0.82rem;color:var(--muted);padding:0.8rem 0;display:flex;gap:0.5rem;align-items:center}
-.breadcrumb a{color:var(--muted);text-decoration:none}.breadcrumb a:hover{color:var(--accent)}
+.breadcrumb{font-size:.82rem;color:var(--muted);padding:.8rem 0;display:flex;gap:.5rem;align-items:center}
+.breadcrumb a{color:var(--muted);text-decoration:none}
+.breadcrumb a:hover{color:var(--accent)}
 .container{max-width:1100px;margin:0 auto;padding:0 1.5rem}
 .page-wrap{max-width:1100px;margin:0 auto;padding:2rem 1.5rem;display:grid;grid-template-columns:1fr 300px;gap:2rem}
-@media(max-width:800px){.page-wrap{grid-template-columns:1fr}}
-.ad-slot{background:#fff;border:1.5px dashed var(--border);border-radius:8px;display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:0.75rem;font-family:monospace;letter-spacing:.05em;text-transform:uppercase}
+@media(max-width:800px){.page-wrap{grid-template-columns:1fr}.nav-links{gap:.9rem;font-size:.8rem}}
+.ad-slot{background:#fff;border:1.5px dashed var(--border);border-radius:8px;display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:.75rem;font-family:monospace;letter-spacing:.05em;text-transform:uppercase}
 .ad-banner{width:100%;height:90px;margin-bottom:1.5rem}
 .ad-sidebar{width:100%;height:250px}
 .tool-header{margin-bottom:1.5rem}
-.tool-header .icon{font-size:2.2rem;margin-bottom:0.6rem}
-.tool-header h1{font-family:var(--display);font-size:1.9rem;font-weight:700;letter-spacing:-0.5px;line-height:1.2;margin-bottom:0.5rem}
-.tool-header p.intro{color:var(--muted);font-size:0.97rem;line-height:1.7;max-width:640px}
-.tool-body{background:#fff;border:1.5px solid var(--border);border-radius:12px;padding:2rem}
-input[type=text]{width:100%;padding:0.85rem 1rem;border:1.5px solid var(--border);border-radius:8px;font-family:var(--font);font-size:1rem;background:var(--bg);color:var(--text);outline:none}
-input[type=text]:focus{border-color:var(--accent2);background:#fff}
-.calc-screen{display:grid;gap:0.75rem;margin-bottom:1rem}
-.calc-buttons{display:grid;grid-template-columns:repeat(4,1fr);gap:0.65rem}
-.calc-btn{padding:0.95rem;border:1.5px solid var(--border);border-radius:10px;background:var(--bg);color:var(--text);font-family:var(--display);font-size:1rem;font-weight:700;cursor:pointer;transition:all .15s}
+.tool-header .icon{font-size:2rem;margin-bottom:.55rem}
+.tool-header h1{font-family:var(--display);font-size:1.9rem;font-weight:700;line-height:1.2;margin-bottom:.5rem}
+.tool-header p.intro{color:var(--muted);font-size:.97rem;line-height:1.7;max-width:700px}
+.tool-body,.info-card,.faq-item{background:#fff;border:1.5px solid var(--border);border-radius:12px}
+.tool-body{padding:2rem}
+.info-grid,.faq-grid{display:grid;grid-template-columns:1fr;gap:1rem;margin-top:1.5rem}
+.info-card,.faq-item{padding:1.2rem 1.25rem}
+.info-card h2,.faq-title{font-family:var(--display);font-size:1rem;margin-bottom:.45rem}
+.info-card p,.info-card li,.faq-item p{color:var(--muted);font-size:.94rem;line-height:1.7}
+.info-card ul{padding-left:1.15rem}
+.btn{padding:.65rem 1.3rem;border:none;border-radius:7px;font-family:var(--display);font-weight:600;font-size:.9rem;cursor:pointer;transition:all .15s}
+.btn-primary{background:var(--text);color:#fff}
+.btn-primary:hover{background:var(--accent)}
+.btn-outline{background:transparent;color:var(--text);border:1.5px solid var(--border)}
+.btn-outline:hover{border-color:var(--text)}
+.btn-row{display:flex;gap:.6rem;flex-wrap:wrap;margin:1rem 0}
+textarea,input[type=text],input[type=number],input[type=date],select{
+  width:100%;padding:.78rem .92rem;border:1.5px solid var(--border);border-radius:8px;
+  font-family:var(--font);font-size:.95rem;background:var(--bg);color:var(--text);outline:none
+}
+textarea{min-height:170px;resize:vertical}
+textarea:focus,input:focus,select:focus{border-color:var(--accent2);background:#fff}
+.input-row{display:flex;gap:.75rem;flex-wrap:wrap;margin-bottom:1rem}
+.input-group{flex:1;min-width:140px}
+label{display:block;font-size:.83rem;font-weight:500;color:var(--muted);margin-bottom:.35rem}
+.result-box{background:var(--bg);border:1.5px solid var(--border);border-radius:8px;padding:1rem 1.1rem;font-size:.94rem;line-height:1.65;min-height:62px;white-space:pre-wrap;word-break:break-word}
+.result-stats{display:flex;gap:.75rem;flex-wrap:wrap;margin:1rem 0}
+.stat-box{flex:1;min-width:92px;background:var(--bg);border:1.5px solid var(--border);border-radius:8px;padding:.85rem;text-align:center}
+.stat-num{font-family:var(--display);font-size:1.45rem;font-weight:800;color:var(--accent)}
+.stat-label{font-size:.73rem;color:var(--muted);margin-top:.12rem}
+.muted{font-size:.85rem;color:var(--muted);margin-top:.7rem}
+.related{margin-top:2rem}
+.related h3,.faq-heading{font-family:var(--display);font-size:1.05rem;font-weight:700;margin-bottom:.8rem}
+.related-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:.6rem}
+@media(max-width:700px){.related-grid{grid-template-columns:1fr}}
+.related-card{background:#fff;border:1.5px solid var(--border);border-radius:8px;padding:.8rem;text-decoration:none;color:var(--text);display:block;font-size:.85rem;font-weight:500}
+.related-card:hover{border-color:var(--accent);color:var(--accent)}
+.calc-buttons{display:grid;grid-template-columns:repeat(4,1fr);gap:.65rem}
+.calc-btn{padding:.95rem;border:1.5px solid var(--border);border-radius:10px;background:var(--bg);color:var(--text);font-family:var(--display);font-size:1rem;font-weight:700;cursor:pointer}
 .calc-btn:hover{border-color:var(--accent);background:#fff}
 .calc-btn.primary{background:var(--text);color:#fff;border-color:var(--text)}
 .calc-btn.primary:hover{background:var(--accent);border-color:var(--accent)}
 .calc-btn.wide{grid-column:span 2}
-.result-box{background:var(--bg);border:1.5px solid var(--border);border-radius:8px;padding:1rem 1.1rem;font-family:monospace;font-size:0.92rem;min-height:60px;white-space:pre-wrap;line-height:1.6}
-.related{margin-top:2rem}
-.related h3{font-family:var(--display);font-size:1.05rem;font-weight:700;margin-bottom:.8rem}
-.related-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:.6rem}
-.related-card{background:#fff;border:1.5px solid var(--border);border-radius:8px;padding:.8rem;text-decoration:none;color:var(--text);display:block;font-size:.85rem;font-weight:500;transition:all .15s}
-.related-card:hover{border-color:var(--accent);color:var(--accent)}
-.info-grid{display:grid;grid-template-columns:1fr;gap:1rem;margin-top:1.5rem}
-.info-card{background:#fff;border:1.5px solid var(--border);border-radius:10px;padding:1.2rem 1.25rem}
-.info-card h2{font-family:var(--display);font-size:1rem;margin-bottom:.45rem}
-.info-card p,.info-card li{color:var(--muted);font-size:.94rem;line-height:1.7}
-.info-card ul{padding-left:1.15rem}
 footer{background:var(--text);color:rgba(255,255,255,.45);text-align:center;padding:2rem 1rem;font-size:.82rem;margin-top:3rem}
 footer a{color:rgba(255,255,255,.6);text-decoration:none}
 footer a:hover{color:#fff}
 </style>
-<script type="application/ld+json">[{"@context":"https://schema.org","@type":"WebApplication","name":"Free Online Calculator","url":"https://jjafri45.github.io/calculator.html","description":"Use a free online calculator for quick math, percentages, decimals, and brackets. Fast basic calculator that works in your browser with no signup required.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","browserRequirements":"Requires JavaScript and a modern web browser","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://jjafri45.github.io/"},{"@type":"ListItem","position":2,"name":"Free Online Calculator","item":"https://jjafri45.github.io/calculator.html"}]}]<div class="info-grid">
-      <section class="info-card">
-        <h2>What this calculator is for</h2>
-        <p>This page is intended for fast everyday arithmetic in the browser: totals, percentages, bill checks, discounts, and simple grouped expressions. It is intentionally lightweight and optimized for direct use.</p>
-      </section>
-      <section class="info-card">
-        <h2>Supported input</h2>
-        <ul>
-          <li>whole numbers and decimals</li>
-          <li>brackets for grouped calculations</li>
-          <li>the operators <code>+</code>, <code>-</code>, <code>*</code>, <code>/</code>, and <code>%</code></li>
-        </ul>
-      </section>
-      <section class="info-card">
-        <h2>When to use a different tool</h2>
-        <p>If you need tax-specific math, loan payments, ROI, or date calculations, use the dedicated ToolDrop pages for those workflows instead of forcing everything into the basic calculator.</p>
-      </section>
-    </div>
+<script type="application/ld+json">[{"@context":"https://schema.org","@type":"WebApplication","name":"Free Online Calculator","url":"https://jjafri45.github.io/calculator.html","description":"Use a free online calculator for quick math, percentages, decimals, and grouped expressions. Fast browser calculator for daily calculations.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","browserRequirements":"Requires JavaScript and a modern web browser","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://jjafri45.github.io/"},{"@type":"ListItem","position":2,"name":"Free Online Calculator","item":"https://jjafri45.github.io/calculator.html"}]},{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Can this calculator handle brackets?","acceptedAnswer":{"@type":"Answer","text":"Yes. You can use grouped expressions with parentheses, such as (1200*15)/100."}},{"@type":"Question","name":"Does the percent operator work like a spreadsheet?","acceptedAnswer":{"@type":"Answer","text":"It behaves like the JavaScript percent operator, which is a remainder operation rather than a spreadsheet percentage button."}},{"@type":"Question","name":"Is this calculator good for tax or EMI calculations?","acceptedAnswer":{"@type":"Answer","text":"It can do the raw arithmetic, but the dedicated ToolDrop finance tools are better for those specific workflows."}}]}]</script>
 </head>
 <body>
 <nav>
@@ -100,68 +104,66 @@ footer a:hover{color:#fff}
     <a href="privacy.html">Privacy</a>
   </div>
 </nav>
-<div class="container"><nav class="breadcrumb"><a href="index.html">Home</a> Ã¢â‚¬Âº <span>Calculators</span> Ã¢â‚¬Âº <span>Calculator</span></nav></div>
+<div class="container"><nav class="breadcrumb"><a href="index.html">Home</a><span>&gt;</span><span>Calculators</span><span>&gt;</span><span>Calculator</span></nav></div>
 <div class="page-wrap">
   <div class="tool-main">
-    <div class="ad-slot ad-banner">[ Ad Ã¢â‚¬â€ 728Ãƒâ€”90 Banner ]</div>
+    <div class="ad-slot ad-banner">[ Ad - 728x90 Banner ]</div>
     <div class="tool-header">
-      <div class="icon">Ã°Å¸Â§Â®</div>
+      <div class="icon">Calc</div>
       <h1>Free Online Calculator</h1>
-      <p class="intro">Use this simple calculator for everyday math, percentages, decimals, and bracketed calculations. Fast, clean, and built for quick browser use.</p>
+      <p class="intro">Use this simple calculator for everyday arithmetic, percentages, decimals, and grouped expressions. It is designed for fast browser use without ads inside the result area or sign-in requirements.</p>
     </div>
     <div class="tool-body">
-      <div class="calc-screen">
-        <input type="text" id="calc-input" placeholder="Enter a calculation, e.g. (1200*15)/100" autocomplete="off">
-        <div class="result-box" id="calc-result">Ready.</div>
-      </div>
-      <div class="calc-buttons">
-        <button class="calc-btn" onclick="calcPress('7')">7</button>
-        <button class="calc-btn" onclick="calcPress('8')">8</button>
-        <button class="calc-btn" onclick="calcPress('9')">9</button>
-        <button class="calc-btn" onclick="calcPress('/')">ÃƒÂ·</button>
-        <button class="calc-btn" onclick="calcPress('4')">4</button>
-        <button class="calc-btn" onclick="calcPress('5')">5</button>
-        <button class="calc-btn" onclick="calcPress('6')">6</button>
-        <button class="calc-btn" onclick="calcPress('*')">Ãƒâ€”</button>
-        <button class="calc-btn" onclick="calcPress('1')">1</button>
-        <button class="calc-btn" onclick="calcPress('2')">2</button>
-        <button class="calc-btn" onclick="calcPress('3')">3</button>
-        <button class="calc-btn" onclick="calcPress('-')">Ã¢Ë†â€™</button>
-        <button class="calc-btn" onclick="calcPress('0')">0</button>
-        <button class="calc-btn" onclick="calcPress('.')">.</button>
-        <button class="calc-btn" onclick="calcPress('%')">%</button>
-        <button class="calc-btn" onclick="calcPress('+')">+</button>
-        <button class="calc-btn wide" onclick="calcClear()">Clear</button>
-        <button class="calc-btn" onclick="calcBack()">Ã¢Å’Â«</button>
-        <button class="calc-btn primary" onclick="calcRun()">=</button>
-      </div>
+      
+<div class="input-row">
+  <div class="input-group"><label>Expression</label><input type="text" id="calc-input" placeholder="Example: (1200*15)/100"></div>
+</div>
+<div class="result-box" id="calc-output">Ready.</div>
+<div class="calc-buttons" style="margin-top:1rem">
+  <button class="calc-btn" onclick="pressCalc('7')">7</button><button class="calc-btn" onclick="pressCalc('8')">8</button><button class="calc-btn" onclick="pressCalc('9')">9</button><button class="calc-btn" onclick="pressCalc('/')">/</button>
+  <button class="calc-btn" onclick="pressCalc('4')">4</button><button class="calc-btn" onclick="pressCalc('5')">5</button><button class="calc-btn" onclick="pressCalc('6')">6</button><button class="calc-btn" onclick="pressCalc('*')">*</button>
+  <button class="calc-btn" onclick="pressCalc('1')">1</button><button class="calc-btn" onclick="pressCalc('2')">2</button><button class="calc-btn" onclick="pressCalc('3')">3</button><button class="calc-btn" onclick="pressCalc('-')">-</button>
+  <button class="calc-btn" onclick="pressCalc('0')">0</button><button class="calc-btn" onclick="pressCalc('.')">.</button><button class="calc-btn" onclick="pressCalc('%')">%</button><button class="calc-btn" onclick="pressCalc('+')">+</button>
+  <button class="calc-btn wide" onclick="clearCalc()">Clear</button><button class="calc-btn" onclick="backCalc()">Back</button><button class="calc-btn primary" onclick="runCalc()">=</button>
+</div>
+<p class="muted">Example use: calculate VAT, bill splits, markups, discounts, and quick totals without opening a spreadsheet.</p>
+
     </div>
-    <div class="related"><h3>Related Tools</h3><div class="related-grid"><a href="percentage-calculator.html" class="related-card">Ã°Å¸â€™Â¯ Percentage Calculator</a>
-<a href="discount-calculator.html" class="related-card">Ã°Å¸ÂÂ·Ã¯Â¸Â Discount Calculator</a>
-<a href="currency-converter.html" class="related-card">Ã°Å¸â€™Â± Currency Converter</a>
-</div></div>
-    <div class="ad-slot ad-banner" style="margin-top:1.5rem">[ Ad Ã¢â‚¬â€ 728Ãƒâ€”90 Banner ]</div>
+    <div class="related"><h3>Related Tools</h3><div class="related-grid"><a href="percentage-calculator.html" class="related-card">Percentage Calculator</a><a href="average-calculator.html" class="related-card">Average Calculator</a><a href="currency-converter.html" class="related-card">Currency Converter</a></div></div>
+    <div class="info-grid">
+      <section class="info-card"><h2>Short explanation</h2><p>This calculator is for general arithmetic. It supports whole numbers, decimals, brackets, and the operators plus, minus, multiply, divide, and percent.</p><p>It is useful when you need a result quickly and do not want the overhead of launching a spreadsheet or a heavy calculator app.</p></section><section class="info-card"><h2>Examples and use cases</h2><p>Typical uses include salary percentages, discount checks, bill splitting, and invoice sanity checks.</p><ul><li>15 percent of 1200</li><li>splitting a dinner bill between multiple people</li><li>checking a discount before checkout</li><li>testing a markup or simple margin idea before using a finance-specific tool</li></ul></section><section class="info-card"><h2>When to use a different tool</h2><p>If you need loan payments, date math, ROI, tax-exclusive amounts, or currency conversion, the dedicated ToolDrop pages are a better fit and give you more context than a basic calculator.</p></section>
+    </div>
+    
+    <section class="faq-grid">
+      <h2 class="faq-heading">Frequently asked questions</h2>
+      <article class="faq-item"><div class="faq-title">Can this calculator handle brackets?</div><p>Yes. You can use grouped expressions with parentheses, such as (1200*15)/100.</p></article><article class="faq-item"><div class="faq-title">Does the percent operator work like a spreadsheet?</div><p>It behaves like the JavaScript percent operator, which is a remainder operation rather than a spreadsheet percentage button.</p></article><article class="faq-item"><div class="faq-title">Is this calculator good for tax or EMI calculations?</div><p>It can do the raw arithmetic, but the dedicated ToolDrop finance tools are better for those specific workflows.</p></article>
+    </section>
+  
+    <div class="ad-slot ad-banner" style="margin-top:1.5rem">[ Ad - 728x90 Banner ]</div>
   </div>
   <aside>
-    <div class="ad-slot ad-sidebar">[ Ad Ã¢â‚¬â€ 300Ãƒâ€”250 ]</div>
+    <div class="ad-slot ad-sidebar">[ Ad - 300x250 ]</div>
   </aside>
 </div>
 <script>
-function calcPress(value){document.getElementById('calc-input').value+=value;}
-function calcClear(){document.getElementById('calc-input').value='';document.getElementById('calc-result').textContent='Cleared.';}
-function calcBack(){const el=document.getElementById('calc-input');el.value=el.value.slice(0,-1);}
-function calcRun(){
-  const expr=document.getElementById('calc-input').value.trim();
-  const out=document.getElementById('calc-result');
-  if(!expr){out.textContent='Enter a calculation first.';return;}
-  if(!/^[0-9+\-*/().%\s]+$/.test(expr)){out.textContent='Only numbers, spaces, brackets, and + - * / % are allowed.';return;}
-  try{
-    const result=Function('"use strict"; return ('+expr+');')();
-    if(!Number.isFinite(result)){out.textContent='Result is not a finite number.';return;}
-    out.textContent='Result: '+result;
-  }catch(e){out.textContent='Invalid expression.';}
+
+function pressCalc(value){ document.getElementById('calc-input').value += value; }
+function clearCalc(){ document.getElementById('calc-input').value=''; document.getElementById('calc-output').textContent='Cleared.'; }
+function backCalc(){ const el=document.getElementById('calc-input'); el.value=el.value.slice(0,-1); }
+function runCalc(){
+  const expr = document.getElementById('calc-input').value.trim();
+  const out = document.getElementById('calc-output');
+  if(!expr){ out.textContent='Enter a calculation first.'; return; }
+  if(!/^[0-9+\-*/().%\s]+$/.test(expr)){ out.textContent='Only numbers, spaces, brackets, and + - * / % are allowed.'; return; }
+  try {
+    const result = Function('"use strict"; return (' + expr + ');')();
+    out.textContent = Number.isFinite(result) ? 'Result: ' + result : 'Result is not a finite number.';
+  } catch (error) {
+    out.textContent = 'Invalid expression.';
+  }
 }
-document.getElementById('calc-input').addEventListener('keydown',function(e){if(e.key==='Enter')calcRun();});
+document.getElementById('calc-input').addEventListener('keydown', function(event){ if(event.key === 'Enter'){ runCalc(); }});
+
 </script>
 <footer>
   <p>&copy; 2026 ToolDrop &nbsp;&middot;&nbsp; <a href="about.html">About</a> &nbsp;&middot;&nbsp; <a href="contact.html">Contact</a> &nbsp;&middot;&nbsp; <a href="privacy.html">Privacy</a> &nbsp;&middot;&nbsp; <a href="terms.html">Terms</a> &nbsp;&middot;&nbsp; <a href="advertising-disclosure.html">Advertising Disclosure</a></p>

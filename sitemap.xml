@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://jjafri45.github.io/</loc><priority>1.0</priority><changefreq>weekly</changefreq></url>
   <url><loc>https://jjafri45.github.io/about.html</loc><priority>0.6</priority><changefreq>yearly</changefreq></url>
   <url><loc>https://jjafri45.github.io/advertising-disclosure.html</loc><priority>0.6</priority><changefreq>yearly</changefreq></url>
   <url><loc>https://jjafri45.github.io/age-calculator.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://jjafri45.github.io/average-calculator.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://jjafri45.github.io/base64-encoder.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://jjafri45.github.io/binary-converter.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://jjafri45.github.io/bmi-calculator.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://jjafri45.github.io/break-even-calculator.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://jjafri45.github.io/calculator.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://jjafri45.github.io/case-converter.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://jjafri45.github.io/coin-flip.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
@@ -14,32 +15,48 @@
   <url><loc>https://jjafri45.github.io/compound-interest.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://jjafri45.github.io/contact.html</loc><priority>0.6</priority><changefreq>yearly</changefreq></url>
   <url><loc>https://jjafri45.github.io/countdown-timer.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://jjafri45.github.io/csv-to-json.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://jjafri45.github.io/currency-converter.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://jjafri45.github.io/date-calculator.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://jjafri45.github.io/discount-calculator.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://jjafri45.github.io/duplicate-remover.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://jjafri45.github.io/emi-calculator.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://jjafri45.github.io/googlea3ca8e44960d6bdd.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://jjafri45.github.io/hash-generator.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://jjafri45.github.io/html-escape.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://jjafri45.github.io/</loc><priority>1.0</priority><changefreq>weekly</changefreq></url>
   <url><loc>https://jjafri45.github.io/json-formatter.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://jjafri45.github.io/json-to-csv.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://jjafri45.github.io/line-sorter.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://jjafri45.github.io/loan-affordability-calculator.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://jjafri45.github.io/lorem-ipsum.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://jjafri45.github.io/margin-calculator.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://jjafri45.github.io/markdown-preview.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://jjafri45.github.io/password-generator.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://jjafri45.github.io/percentage-calculator.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://jjafri45.github.io/privacy.html</loc><priority>0.6</priority><changefreq>yearly</changefreq></url>
   <url><loc>https://jjafri45.github.io/profit-calculator.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://jjafri45.github.io/qr-code-generator.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://jjafri45.github.io/random-number-generator.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://jjafri45.github.io/ratio-calculator.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://jjafri45.github.io/reading-time.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://jjafri45.github.io/regex-tester.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://jjafri45.github.io/remove-spaces.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://jjafri45.github.io/roi-calculator.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://jjafri45.github.io/roman-converter.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://jjafri45.github.io/savings-goal-calculator.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://jjafri45.github.io/slug-generator.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://jjafri45.github.io/stopwatch.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://jjafri45.github.io/tax-calculator.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://jjafri45.github.io/terms.html</loc><priority>0.6</priority><changefreq>yearly</changefreq></url>
+  <url><loc>https://jjafri45.github.io/text-diff-checker.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://jjafri45.github.io/text-reverser.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://jjafri45.github.io/text-translator.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://jjafri45.github.io/timestamp-converter.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://jjafri45.github.io/timezone-converter.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://jjafri45.github.io/tip-calculator.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://jjafri45.github.io/unit-converter.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://jjafri45.github.io/url-encoder.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://jjafri45.github.io/uuid-generator.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://jjafri45.github.io/word-counter.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
 </urlset>

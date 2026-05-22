@@ -4,12 +4,12 @@
 <script src="https://quge5.com/88/tag.min.js" data-zone="242094" async data-cfasync="false"></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>QR Code Generator - Create QR Codes for Links, Text and Wi-Fi</title>
-<meta name="description" content="Generate QR codes online for links, text, emails, contact details, and more. Free QR code generator that works instantly in your browser.">
-<meta name="keywords" content="qr code generator, create qr code, free qr generator, qr code for link, browser qr code tool">
+<title>QR Code Generator | Create QR Codes for URLs, Text and Contact Details</title>
+<meta name="description" content="Generate QR codes online for URLs, plain text, contact details, and quick sharing with a free browser-based QR code generator.">
+<meta name="keywords" content="qr code generator, create qr code, url qr code, text qr code">
 <link rel="canonical" href="https://jjafri45.github.io/qr-code-generator.html">
-<meta property="og:title" content="QR Code Generator - Create QR Codes for Links, Text and Wi-Fi">
-<meta property="og:description" content="Generate QR codes online for links, text, and everyday sharing needs with a simple browser tool.">
+<meta property="og:title" content="QR Code Generator | Create QR Codes for URLs, Text and Contact Details">
+<meta property="og:description" content="Generate QR codes online for URLs, plain text, contact details, and quick sharing with a free browser-based QR code generator.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://jjafri45.github.io/qr-code-generator.html">
 <meta property="og:site_name" content="ToolDrop">
@@ -17,6 +17,7 @@
 <meta name="robots" content="index, follow, max-image-preview:large">
 <meta name="theme-color" content="#111110">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Inter:wght@400;450;500&display=swap" rel="stylesheet">
 <style>
@@ -29,42 +30,69 @@
 html{scroll-behavior:smooth}
 body{font-family:var(--font);background:var(--bg);color:var(--text);font-size:16px;line-height:1.65}
 nav{background:#fff;border-bottom:1px solid var(--border);padding:0 1.5rem;height:58px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100}
-.logo{font-family:var(--display);font-weight:800;font-size:1.25rem;color:var(--text);text-decoration:none;letter-spacing:-0.3px}
+.logo{font-family:var(--display);font-weight:800;font-size:1.25rem;color:var(--text);text-decoration:none}
 .logo span{color:var(--accent)}
-.nav-links{display:flex;gap:1.5rem;font-size:0.88rem;font-weight:500}
-.nav-links a{color:var(--muted);text-decoration:none;transition:color 0.15s}
+.nav-links{display:flex;gap:1.5rem;font-size:.88rem;font-weight:500}
+.nav-links a{color:var(--muted);text-decoration:none}
 .nav-links a:hover{color:var(--text)}
-.breadcrumb{font-size:0.82rem;color:var(--muted);padding:0.8rem 0;display:flex;gap:0.5rem;align-items:center}
-.breadcrumb a{color:var(--muted);text-decoration:none}.breadcrumb a:hover{color:var(--accent)}
+.breadcrumb{font-size:.82rem;color:var(--muted);padding:.8rem 0;display:flex;gap:.5rem;align-items:center}
+.breadcrumb a{color:var(--muted);text-decoration:none}
+.breadcrumb a:hover{color:var(--accent)}
 .container{max-width:1100px;margin:0 auto;padding:0 1.5rem}
 .page-wrap{max-width:1100px;margin:0 auto;padding:2rem 1.5rem;display:grid;grid-template-columns:1fr 300px;gap:2rem}
-@media(max-width:800px){.page-wrap{grid-template-columns:1fr}}
-.ad-slot{background:#fff;border:1.5px dashed var(--border);border-radius:8px;display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:0.75rem;font-family:monospace;letter-spacing:.05em;text-transform:uppercase}
+@media(max-width:800px){.page-wrap{grid-template-columns:1fr}.nav-links{gap:.9rem;font-size:.8rem}}
+.ad-slot{background:#fff;border:1.5px dashed var(--border);border-radius:8px;display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:.75rem;font-family:monospace;letter-spacing:.05em;text-transform:uppercase}
 .ad-banner{width:100%;height:90px;margin-bottom:1.5rem}
 .ad-sidebar{width:100%;height:250px}
 .tool-header{margin-bottom:1.5rem}
-.tool-header .icon{font-size:2.2rem;margin-bottom:0.6rem}
-.tool-header h1{font-family:var(--display);font-size:1.9rem;font-weight:700;letter-spacing:-0.5px;line-height:1.2;margin-bottom:0.5rem}
-.tool-header p.intro{color:var(--muted);font-size:0.97rem;line-height:1.7;max-width:640px}
-.tool-body{background:#fff;border:1.5px solid var(--border);border-radius:12px;padding:2rem}
-textarea{width:100%;min-height:150px;padding:0.75rem 0.9rem;border:1.5px solid var(--border);border-radius:8px;font-family:var(--font);font-size:0.95rem;background:var(--bg);color:var(--text);outline:none;resize:vertical}
-textarea:focus{border-color:var(--accent2);background:#fff}
+.tool-header .icon{font-size:2rem;margin-bottom:.55rem}
+.tool-header h1{font-family:var(--display);font-size:1.9rem;font-weight:700;line-height:1.2;margin-bottom:.5rem}
+.tool-header p.intro{color:var(--muted);font-size:.97rem;line-height:1.7;max-width:700px}
+.tool-body,.info-card,.faq-item{background:#fff;border:1.5px solid var(--border);border-radius:12px}
+.tool-body{padding:2rem}
+.info-grid,.faq-grid{display:grid;grid-template-columns:1fr;gap:1rem;margin-top:1.5rem}
+.info-card,.faq-item{padding:1.2rem 1.25rem}
+.info-card h2,.faq-title{font-family:var(--display);font-size:1rem;margin-bottom:.45rem}
+.info-card p,.info-card li,.faq-item p{color:var(--muted);font-size:.94rem;line-height:1.7}
+.info-card ul{padding-left:1.15rem}
 .btn{padding:.65rem 1.3rem;border:none;border-radius:7px;font-family:var(--display);font-weight:600;font-size:.9rem;cursor:pointer;transition:all .15s}
-.btn-primary{background:var(--text);color:#fff}.btn-primary:hover{background:var(--accent)}
-.result-wrap{display:grid;gap:1rem;place-items:center;margin-top:1.5rem}
-.qr-box{background:var(--bg);border:1.5px solid var(--border);border-radius:12px;padding:1rem;width:min(100%,280px);min-height:280px;display:grid;place-items:center}
-.qr-box img{max-width:100%;height:auto;display:block}
-.muted{font-size:.85rem;color:var(--muted)}
+.btn-primary{background:var(--text);color:#fff}
+.btn-primary:hover{background:var(--accent)}
+.btn-outline{background:transparent;color:var(--text);border:1.5px solid var(--border)}
+.btn-outline:hover{border-color:var(--text)}
+.btn-row{display:flex;gap:.6rem;flex-wrap:wrap;margin:1rem 0}
+textarea,input[type=text],input[type=number],input[type=date],select{
+  width:100%;padding:.78rem .92rem;border:1.5px solid var(--border);border-radius:8px;
+  font-family:var(--font);font-size:.95rem;background:var(--bg);color:var(--text);outline:none
+}
+textarea{min-height:170px;resize:vertical}
+textarea:focus,input:focus,select:focus{border-color:var(--accent2);background:#fff}
+.input-row{display:flex;gap:.75rem;flex-wrap:wrap;margin-bottom:1rem}
+.input-group{flex:1;min-width:140px}
+label{display:block;font-size:.83rem;font-weight:500;color:var(--muted);margin-bottom:.35rem}
+.result-box{background:var(--bg);border:1.5px solid var(--border);border-radius:8px;padding:1rem 1.1rem;font-size:.94rem;line-height:1.65;min-height:62px;white-space:pre-wrap;word-break:break-word}
+.result-stats{display:flex;gap:.75rem;flex-wrap:wrap;margin:1rem 0}
+.stat-box{flex:1;min-width:92px;background:var(--bg);border:1.5px solid var(--border);border-radius:8px;padding:.85rem;text-align:center}
+.stat-num{font-family:var(--display);font-size:1.45rem;font-weight:800;color:var(--accent)}
+.stat-label{font-size:.73rem;color:var(--muted);margin-top:.12rem}
+.muted{font-size:.85rem;color:var(--muted);margin-top:.7rem}
 .related{margin-top:2rem}
-.related h3{font-family:var(--display);font-size:1.05rem;font-weight:700;margin-bottom:.8rem}
+.related h3,.faq-heading{font-family:var(--display);font-size:1.05rem;font-weight:700;margin-bottom:.8rem}
 .related-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:.6rem}
-.related-card{background:#fff;border:1.5px solid var(--border);border-radius:8px;padding:.8rem;text-decoration:none;color:var(--text);display:block;font-size:.85rem;font-weight:500;transition:all .15s}
+@media(max-width:700px){.related-grid{grid-template-columns:1fr}}
+.related-card{background:#fff;border:1.5px solid var(--border);border-radius:8px;padding:.8rem;text-decoration:none;color:var(--text);display:block;font-size:.85rem;font-weight:500}
 .related-card:hover{border-color:var(--accent);color:var(--accent)}
+.calc-buttons{display:grid;grid-template-columns:repeat(4,1fr);gap:.65rem}
+.calc-btn{padding:.95rem;border:1.5px solid var(--border);border-radius:10px;background:var(--bg);color:var(--text);font-family:var(--display);font-size:1rem;font-weight:700;cursor:pointer}
+.calc-btn:hover{border-color:var(--accent);background:#fff}
+.calc-btn.primary{background:var(--text);color:#fff;border-color:var(--text)}
+.calc-btn.primary:hover{background:var(--accent);border-color:var(--accent)}
+.calc-btn.wide{grid-column:span 2}
 footer{background:var(--text);color:rgba(255,255,255,.45);text-align:center;padding:2rem 1rem;font-size:.82rem;margin-top:3rem}
 footer a{color:rgba(255,255,255,.6);text-decoration:none}
 footer a:hover{color:#fff}
 </style>
-<script type="application/ld+json">[{"@context":"https://schema.org","@type":"WebApplication","name":"Free QR Code Generator","url":"https://jjafri45.github.io/qr-code-generator.html","description":"Generate QR codes online for links, text, emails, contact details, and more. Free QR code generator that works instantly in your browser.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","browserRequirements":"Requires JavaScript and a modern web browser","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://jjafri45.github.io/"},{"@type":"ListItem","position":2,"name":"Free QR Code Generator","item":"https://jjafri45.github.io/qr-code-generator.html"}]}]</script>
+<script type="application/ld+json">[{"@context":"https://schema.org","@type":"WebApplication","name":"Free QR Code Generator","url":"https://jjafri45.github.io/qr-code-generator.html","description":"Generate QR codes online for URLs, plain text, contact details, and quick sharing with a free browser-based QR code generator.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","browserRequirements":"Requires JavaScript and a modern web browser","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://jjafri45.github.io/"},{"@type":"ListItem","position":2,"name":"Free QR Code Generator","item":"https://jjafri45.github.io/qr-code-generator.html"}]},{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Can I use this for website URLs?","acceptedAnswer":{"@type":"Answer","text":"Yes. URLs are one of the most common and reliable uses for QR codes."}},{"@type":"Question","name":"Why do shorter QR payloads scan better?","acceptedAnswer":{"@type":"Answer","text":"Because shorter data creates a less dense code, which is easier for cameras to resolve at smaller sizes."}},{"@type":"Question","name":"Can I download the generated code?","acceptedAnswer":{"@type":"Answer","text":"Yes. After generation you can use the download button to save the image."}}]}]</script>
 </head>
 <body>
 <nav>
@@ -76,42 +104,61 @@ footer a:hover{color:#fff}
     <a href="privacy.html">Privacy</a>
   </div>
 </nav>
-<div class="container"><nav class="breadcrumb"><a href="index.html">Home</a> Ã¢â‚¬Âº <span>Other Tools</span> Ã¢â‚¬Âº <span>QR Code Generator</span></nav></div>
+<div class="container"><nav class="breadcrumb"><a href="index.html">Home</a><span>&gt;</span><span>Other Tools</span><span>&gt;</span><span>QR Code Generator</span></nav></div>
 <div class="page-wrap">
   <div class="tool-main">
-    <div class="ad-slot ad-banner">[ Ad Ã¢â‚¬â€ 728Ãƒâ€”90 Banner ]</div>
+    <div class="ad-slot ad-banner">[ Ad - 728x90 Banner ]</div>
     <div class="tool-header">
-      <div class="icon">Ã°Å¸â€Â³</div>
+      <div class="icon">QR</div>
       <h1>Free QR Code Generator</h1>
-      <p class="intro">Create a QR code for a website link, plain text, email address, phone number, or Wi-Fi share note in seconds. Great for menus, bios, posters, and fast sharing.</p>
+      <p class="intro">Generate QR codes for URLs, plain text, contact details, or other short strings directly in your browser. Useful for posters, menus, packaging, event material, and quick device-to-device sharing.</p>
     </div>
     <div class="tool-body">
-      <textarea id="qr-input" placeholder="Paste a URL, text, email, phone number, or Wi-Fi string...">https://jjafri45.github.io/</textarea>
-      <div style="margin-top:1rem"><button class="btn btn-primary" onclick="qrGenerate()">Generate QR Code</button></div>
-      <div class="result-wrap">
-        <div class="qr-box"><img id="qr-image" alt="Generated QR code"></div>
-        <p class="muted">Tip: URLs work best for public sharing.</p>
-      </div>
+      
+<textarea id="qr-input" placeholder="Paste a URL, text, email, phone number, or Wi-Fi string...">https://jjafri45.github.io/</textarea>
+<div class="btn-row">
+  <button class="btn btn-primary" onclick="makeQr()">Generate QR code</button>
+  <button class="btn btn-outline" onclick="downloadQr()">Download image</button>
+</div>
+<div class="result-box" id="qr-wrap" style="text-align:center">QR code will appear here.</div>
+<p class="muted">Tip: shorter text usually creates a cleaner QR code that scans more reliably at smaller print sizes.</p>
+
     </div>
-    <div class="related"><h3>Related Tools</h3><div class="related-grid"><a href="url-encoder.html" class="related-card">Ã°Å¸â€â€” URL Encoder / Decoder</a>
-<a href="random-number-generator.html" class="related-card">Ã°Å¸Å½Â² Random Number Generator</a>
-<a href="password-generator.html" class="related-card">Ã°Å¸â€â€˜ Password Generator</a>
-</div></div>
-    <div class="ad-slot ad-banner" style="margin-top:1.5rem">[ Ad Ã¢â‚¬â€ 728Ãƒâ€”90 Banner ]</div>
+    <div class="related"><h3>Related Tools</h3><div class="related-grid"><a href="slug-generator.html" class="related-card">Slug Generator</a><a href="text-translator.html" class="related-card">Text Translator</a></div></div>
+    <div class="info-grid">
+      <section class="info-card"><h2>What this QR code generator is for</h2><p>This page creates QR codes for common short payloads such as links, plain text, contact details, or app-store destinations. It is meant for quick practical use and testing.</p></section><section class="info-card"><h2>Examples and use cases</h2><p>QR codes are most useful when you need a phone camera to open or capture something quickly.</p><ul><li>printing a link on posters or packaging</li><li>sharing menus or event details without typing a URL</li><li>sending someone to a support page or payment link</li><li>testing whether a short code scans cleanly before final production</li></ul></section><section class="info-card"><h2>Short explanation</h2><p>Longer strings create denser codes, which can be harder to scan at small sizes or on low-quality prints. If scanning reliability matters, keep the content short and test it on a real phone camera.</p></section>
+    </div>
+    
+    <section class="faq-grid">
+      <h2 class="faq-heading">Frequently asked questions</h2>
+      <article class="faq-item"><div class="faq-title">Can I use this for website URLs?</div><p>Yes. URLs are one of the most common and reliable uses for QR codes.</p></article><article class="faq-item"><div class="faq-title">Why do shorter QR payloads scan better?</div><p>Because shorter data creates a less dense code, which is easier for cameras to resolve at smaller sizes.</p></article><article class="faq-item"><div class="faq-title">Can I download the generated code?</div><p>Yes. After generation you can use the download button to save the image.</p></article>
+    </section>
+  
+    <div class="ad-slot ad-banner" style="margin-top:1.5rem">[ Ad - 728x90 Banner ]</div>
   </div>
   <aside>
-    <div class="ad-slot ad-sidebar">[ Ad Ã¢â‚¬â€ 300Ãƒâ€”250 ]</div>
+    <div class="ad-slot ad-sidebar">[ Ad - 300x250 ]</div>
   </aside>
 </div>
 <script>
-function qrGenerate(){
-  const value=document.getElementById('qr-input').value.trim();
-  const img=document.getElementById('qr-image');
-  if(!value){img.removeAttribute('src');img.alt='No QR code generated';return;}
-  img.src='https://api.qrserver.com/v1/create-qr-code/?size=240x240&data='+encodeURIComponent(value);
-  img.alt='QR code for '+value;
+
+function makeQr(){
+  const value = document.getElementById('qr-input').value.trim();
+  const wrap = document.getElementById('qr-wrap');
+  if(!value){ wrap.textContent = 'Enter text or a URL first.'; return; }
+  const url = 'https://api.qrserver.com/v1/create-qr-code/?size=220x220&data=' + encodeURIComponent(value);
+  wrap.innerHTML = '<img id="qr-image" src="' + url + '" alt="Generated QR code" width="220" height="220">';
 }
-qrGenerate();
+function downloadQr(){
+  const image = document.getElementById('qr-image');
+  if(!image) return;
+  const link = document.createElement('a');
+  link.href = image.src;
+  link.download = 'qrcode.png';
+  link.click();
+}
+makeQr();
+
 </script>
 <footer>
   <p>&copy; 2026 ToolDrop &nbsp;&middot;&nbsp; <a href="about.html">About</a> &nbsp;&middot;&nbsp; <a href="contact.html">Contact</a> &nbsp;&middot;&nbsp; <a href="privacy.html">Privacy</a> &nbsp;&middot;&nbsp; <a href="terms.html">Terms</a> &nbsp;&middot;&nbsp; <a href="advertising-disclosure.html">Advertising Disclosure</a></p>

@@ -4,23 +4,20 @@
 <script src="https://quge5.com/88/tag.min.js" data-zone="242094" async data-cfasync="false"></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Percentage Calculator Ã¢â‚¬â€œ Find %, Increase & Decrease Online</title>
-<meta name="description" content="Calculate percentages, percentage increase, decrease, and more. Free online percentage calculator with instant results.">
-<meta name="keywords" content="percentage calculator, percent calculator, calculate percentage online, percentage increase calculator">
+<title>Percentage Calculator | Percent Increase, Decrease and Change</title>
+<meta name="description" content="Calculate percentages, increases, decreases, and percentage changes instantly with a free browser-based percentage calculator.">
+<meta name="keywords" content="percentage calculator, percent increase, percent decrease, percentage change tool">
 <link rel="canonical" href="https://jjafri45.github.io/percentage-calculator.html">
-<meta property="og:title" content="Percentage Calculator Ã¢â‚¬â€œ Find %, Increase & Decrease Online">
-<meta property="og:description" content="Calculate percentages, percentage increase, decrease, and more. Free online percentage calculator with instant results.">
+<meta property="og:title" content="Percentage Calculator | Percent Increase, Decrease and Change">
+<meta property="og:description" content="Calculate percentages, increases, decreases, and percentage changes instantly with a free browser-based percentage calculator.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://jjafri45.github.io/percentage-calculator.html">
 <meta property="og:site_name" content="ToolDrop">
 <meta name="twitter:card" content="summary">
 <meta name="robots" content="index, follow, max-image-preview:large">
 <meta name="theme-color" content="#111110">
-<!-- Ã¢Å“â€¦ Replace with real AdSense code when approved:
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXX" crossorigin="anonymous"></script>
--->
-
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Inter:wght@400;450;500&display=swap" rel="stylesheet">
 <style>
@@ -32,102 +29,70 @@
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
 body{font-family:var(--font);background:var(--bg);color:var(--text);font-size:16px;line-height:1.65}
-
-/* NAV */
 nav{background:#fff;border-bottom:1px solid var(--border);padding:0 1.5rem;height:58px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100}
-.logo{font-family:var(--display);font-weight:800;font-size:1.25rem;color:var(--text);text-decoration:none;letter-spacing:-0.3px}
+.logo{font-family:var(--display);font-weight:800;font-size:1.25rem;color:var(--text);text-decoration:none}
 .logo span{color:var(--accent)}
-.nav-links{display:flex;gap:1.5rem;font-size:0.88rem;font-weight:500}
-.nav-links a{color:var(--muted);text-decoration:none;transition:color 0.15s}
+.nav-links{display:flex;gap:1.5rem;font-size:.88rem;font-weight:500}
+.nav-links a{color:var(--muted);text-decoration:none}
 .nav-links a:hover{color:var(--text)}
-
-/* BREADCRUMB */
-.breadcrumb{font-size:0.82rem;color:var(--muted);padding:0.8rem 0;display:flex;gap:0.5rem;align-items:center}
-.breadcrumb a{color:var(--muted);text-decoration:none}.breadcrumb a:hover{color:var(--accent)}
-
-/* CONTAINER */
+.breadcrumb{font-size:.82rem;color:var(--muted);padding:.8rem 0;display:flex;gap:.5rem;align-items:center}
+.breadcrumb a{color:var(--muted);text-decoration:none}
+.breadcrumb a:hover{color:var(--accent)}
 .container{max-width:1100px;margin:0 auto;padding:0 1.5rem}
 .page-wrap{max-width:1100px;margin:0 auto;padding:2rem 1.5rem;display:grid;grid-template-columns:1fr 300px;gap:2rem}
-@media(max-width:800px){.page-wrap{grid-template-columns:1fr}}
-
-/* AD SLOT */
-.ad-slot{background:#fff;border:1.5px dashed var(--border);border-radius:8px;display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:0.75rem;font-family:monospace;letter-spacing:.05em;text-transform:uppercase}
+@media(max-width:800px){.page-wrap{grid-template-columns:1fr}.nav-links{gap:.9rem;font-size:.8rem}}
+.ad-slot{background:#fff;border:1.5px dashed var(--border);border-radius:8px;display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:.75rem;font-family:monospace;letter-spacing:.05em;text-transform:uppercase}
 .ad-banner{width:100%;height:90px;margin-bottom:1.5rem}
 .ad-sidebar{width:100%;height:250px}
-
-/* TOOL CARD */
 .tool-header{margin-bottom:1.5rem}
-.tool-header .icon{font-size:2.2rem;margin-bottom:0.6rem}
-.tool-header h1{font-family:var(--display);font-size:1.9rem;font-weight:700;letter-spacing:-0.5px;line-height:1.2;margin-bottom:0.5rem}
-.tool-header p.intro{color:var(--muted);font-size:0.97rem;line-height:1.7;max-width:640px}
-
-.tool-body{background:#fff;border:1.5px solid var(--border);border-radius:12px;padding:2rem}
-
-/* INPUTS */
-textarea,input[type=text],input[type=number],select{
-  width:100%;padding:0.75rem 0.9rem;border:1.5px solid var(--border);border-radius:8px;
-  font-family:var(--font);font-size:0.95rem;background:var(--bg);color:var(--text);outline:none;transition:border-color .15s
-}
-textarea{min-height:180px;resize:vertical;font-family:monospace;font-size:0.9rem;line-height:1.6}
-textarea:focus,input:focus,select:focus{border-color:var(--accent2);background:#fff}
-.input-row{display:flex;gap:0.75rem;flex-wrap:wrap;margin-bottom:1rem}
-.input-group{flex:1;min-width:130px}
-label{display:block;font-size:0.83rem;font-weight:500;color:var(--muted);margin-bottom:0.35rem}
-
-/* BUTTONS */
+.tool-header .icon{font-size:2rem;margin-bottom:.55rem}
+.tool-header h1{font-family:var(--display);font-size:1.9rem;font-weight:700;line-height:1.2;margin-bottom:.5rem}
+.tool-header p.intro{color:var(--muted);font-size:.97rem;line-height:1.7;max-width:700px}
+.tool-body,.info-card,.faq-item{background:#fff;border:1.5px solid var(--border);border-radius:12px}
+.tool-body{padding:2rem}
+.info-grid,.faq-grid{display:grid;grid-template-columns:1fr;gap:1rem;margin-top:1.5rem}
+.info-card,.faq-item{padding:1.2rem 1.25rem}
+.info-card h2,.faq-title{font-family:var(--display);font-size:1rem;margin-bottom:.45rem}
+.info-card p,.info-card li,.faq-item p{color:var(--muted);font-size:.94rem;line-height:1.7}
+.info-card ul{padding-left:1.15rem}
 .btn{padding:.65rem 1.3rem;border:none;border-radius:7px;font-family:var(--display);font-weight:600;font-size:.9rem;cursor:pointer;transition:all .15s}
-.btn-primary{background:var(--text);color:#fff}.btn-primary:hover{background:var(--accent)}
-.btn-outline{background:transparent;color:var(--text);border:1.5px solid var(--border)}.btn-outline:hover{border-color:var(--text)}
-.btn-sm{padding:.4rem .85rem;font-size:.8rem}
-.btn-row{display:flex;gap:.5rem;flex-wrap:wrap;margin:1rem 0}
-
-/* RESULTS */
-.result-box{background:var(--bg);border:1.5px solid var(--border);border-radius:8px;padding:1rem 1.1rem;font-family:monospace;font-size:0.9rem;min-height:60px;word-break:break-all;white-space:pre-wrap;line-height:1.6}
+.btn-primary{background:var(--text);color:#fff}
+.btn-primary:hover{background:var(--accent)}
+.btn-outline{background:transparent;color:var(--text);border:1.5px solid var(--border)}
+.btn-outline:hover{border-color:var(--text)}
+.btn-row{display:flex;gap:.6rem;flex-wrap:wrap;margin:1rem 0}
+textarea,input[type=text],input[type=number],input[type=date],select{
+  width:100%;padding:.78rem .92rem;border:1.5px solid var(--border);border-radius:8px;
+  font-family:var(--font);font-size:.95rem;background:var(--bg);color:var(--text);outline:none
+}
+textarea{min-height:170px;resize:vertical}
+textarea:focus,input:focus,select:focus{border-color:var(--accent2);background:#fff}
+.input-row{display:flex;gap:.75rem;flex-wrap:wrap;margin-bottom:1rem}
+.input-group{flex:1;min-width:140px}
+label{display:block;font-size:.83rem;font-weight:500;color:var(--muted);margin-bottom:.35rem}
+.result-box{background:var(--bg);border:1.5px solid var(--border);border-radius:8px;padding:1rem 1.1rem;font-size:.94rem;line-height:1.65;min-height:62px;white-space:pre-wrap;word-break:break-word}
 .result-stats{display:flex;gap:.75rem;flex-wrap:wrap;margin:1rem 0}
-.stat-box{flex:1;min-width:90px;background:var(--bg);border-radius:8px;padding:.9rem;text-align:center;border:1.5px solid var(--border)}
-.stat-num{font-family:var(--display);font-size:1.7rem;font-weight:800;color:var(--accent)}
-.stat-label{font-size:.73rem;color:var(--muted);margin-top:.15rem}
-hr.div{border:none;border-top:1.5px solid var(--border);margin:1.2rem 0}
-.copy-row{display:flex;justify-content:space-between;align-items:center;margin-bottom:.5rem}
-.copy-row span{font-size:.82rem;color:var(--muted)}
-
-/* RELATED */
+.stat-box{flex:1;min-width:92px;background:var(--bg);border:1.5px solid var(--border);border-radius:8px;padding:.85rem;text-align:center}
+.stat-num{font-family:var(--display);font-size:1.45rem;font-weight:800;color:var(--accent)}
+.stat-label{font-size:.73rem;color:var(--muted);margin-top:.12rem}
+.muted{font-size:.85rem;color:var(--muted);margin-top:.7rem}
 .related{margin-top:2rem}
-.related h3{font-family:var(--display);font-size:1.05rem;font-weight:700;margin-bottom:.8rem}
+.related h3,.faq-heading{font-family:var(--display);font-size:1.05rem;font-weight:700;margin-bottom:.8rem}
 .related-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:.6rem}
-.related-card{background:#fff;border:1.5px solid var(--border);border-radius:8px;padding:.8rem;text-decoration:none;color:var(--text);display:block;font-size:.85rem;font-weight:500;transition:all .15s}
+@media(max-width:700px){.related-grid{grid-template-columns:1fr}}
+.related-card{background:#fff;border:1.5px solid var(--border);border-radius:8px;padding:.8rem;text-decoration:none;color:var(--text);display:block;font-size:.85rem;font-weight:500}
 .related-card:hover{border-color:var(--accent);color:var(--accent)}
-
-/* HOME */
-.hero{background:var(--text);color:#fff;padding:3.5rem 1.5rem 3rem;text-align:center}
-.hero h1{font-family:var(--display);font-size:clamp(2rem,5vw,3.2rem);font-weight:800;letter-spacing:-1px;margin-bottom:.8rem}
-.hero h1 em{color:var(--accent);font-style:normal}
-.hero p{color:rgba(255,255,255,.6);font-size:1rem;max-width:450px;margin:0 auto 1.8rem}
-.search-wrap{max-width:500px;margin:0 auto}
-#search-input{width:100%;padding:.85rem 1.1rem;border-radius:8px;border:2px solid rgba(255,255,255,.15);background:rgba(255,255,255,.08);color:#fff;font-family:var(--font);font-size:1rem;outline:none}
-#search-input::placeholder{color:rgba(255,255,255,.35)}
-#search-input:focus{border-color:var(--accent)}
-
-.cat-bar{display:flex;gap:.5rem;flex-wrap:wrap;padding:1.2rem 1.5rem;max-width:1100px;margin:0 auto}
-.cat-btn{padding:.35rem .9rem;border-radius:20px;border:1.5px solid var(--border);background:#fff;cursor:pointer;font-size:.82rem;font-weight:500;font-family:var(--font);color:var(--text);transition:all .15s}
-.cat-btn.active,.cat-btn:hover{background:var(--text);color:#fff;border-color:var(--text)}
-
-.tools-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:1rem;padding:0 1.5rem 2rem;max-width:1100px;margin:0 auto}
-.tool-card{background:#fff;border:1.5px solid var(--border);border-radius:10px;padding:1.3rem;cursor:pointer;text-decoration:none;color:var(--text);display:block;transition:all .15s}
-.tool-card:hover{border-color:var(--accent);transform:translateY(-2px);box-shadow:0 6px 20px rgba(0,0,0,.07)}
-.card-icon{font-size:1.6rem;margin-bottom:.5rem}
-.card-name{font-family:var(--display);font-weight:700;font-size:.97rem;margin-bottom:.25rem}
-.card-desc{font-size:.8rem;color:var(--muted);line-height:1.5}
-.card-cat{display:inline-block;margin-top:.6rem;font-size:.68rem;background:var(--bg);color:var(--muted);padding:.12rem .45rem;border-radius:3px}
-.no-results{grid-column:1/-1;text-align:center;color:var(--muted);padding:3rem}
-
-/* FOOTER */
+.calc-buttons{display:grid;grid-template-columns:repeat(4,1fr);gap:.65rem}
+.calc-btn{padding:.95rem;border:1.5px solid var(--border);border-radius:10px;background:var(--bg);color:var(--text);font-family:var(--display);font-size:1rem;font-weight:700;cursor:pointer}
+.calc-btn:hover{border-color:var(--accent);background:#fff}
+.calc-btn.primary{background:var(--text);color:#fff;border-color:var(--text)}
+.calc-btn.primary:hover{background:var(--accent);border-color:var(--accent)}
+.calc-btn.wide{grid-column:span 2}
 footer{background:var(--text);color:rgba(255,255,255,.45);text-align:center;padding:2rem 1rem;font-size:.82rem;margin-top:3rem}
 footer a{color:rgba(255,255,255,.6);text-decoration:none}
 footer a:hover{color:#fff}
 </style>
-
-<script type="application/ld+json">[{"@context":"https://schema.org","@type":"WebApplication","name":"Free Percentage Calculator","url":"https://jjafri45.github.io/percentage-calculator.html","description":"Calculate percentages, percentage increase, decrease, and more. Free online percentage calculator with instant results.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","browserRequirements":"Requires JavaScript and a modern web browser","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://jjafri45.github.io/"},{"@type":"ListItem","position":2,"name":"Free Percentage Calculator","item":"https://jjafri45.github.io/percentage-calculator.html"}]}]</script>
+<script type="application/ld+json">[{"@context":"https://schema.org","@type":"WebApplication","name":"Free Percentage Calculator","url":"https://jjafri45.github.io/percentage-calculator.html","description":"Calculate percentages, increases, decreases, and percentage changes instantly with a free browser-based percentage calculator.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","browserRequirements":"Requires JavaScript and a modern web browser","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://jjafri45.github.io/"},{"@type":"ListItem","position":2,"name":"Free Percentage Calculator","item":"https://jjafri45.github.io/percentage-calculator.html"}]},{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the difference between percentage of and percentage increase?","acceptedAnswer":{"@type":"Answer","text":"Percentage of finds part of a number. Percentage increase adds that proportion on top of the original amount."}},{"@type":"Question","name":"Can I use decimals?","acceptedAnswer":{"@type":"Answer","text":"Yes. Both the base number and the percentage field accept decimals."}},{"@type":"Question","name":"Is this suitable for discounts?","acceptedAnswer":{"@type":"Answer","text":"Yes. The decrease function is especially useful for discount checks."}}]}]</script>
 </head>
 <body>
 <nav>
@@ -139,50 +104,67 @@ footer a:hover{color:#fff}
     <a href="privacy.html">Privacy</a>
   </div>
 </nav>
-<div class="container"><nav class="breadcrumb"><a href="index.html">Home</a> Ã¢â‚¬Âº <span>Calculators</span> Ã¢â‚¬Âº <span>Percentage Calculator</span></nav></div>
+<div class="container"><nav class="breadcrumb"><a href="index.html">Home</a><span>&gt;</span><span>Calculators</span><span>&gt;</span><span>Percentage Calculator</span></nav></div>
 <div class="page-wrap">
   <div class="tool-main">
-    <div class="ad-slot ad-banner">[ Ad Ã¢â‚¬â€ 728Ãƒâ€”90 Banner ]</div>
+    <div class="ad-slot ad-banner">[ Ad - 728x90 Banner ]</div>
     <div class="tool-header">
-      <div class="icon">Ã°Å¸â€™Â¯</div>
+      <div class="icon">%</div>
       <h1>Free Percentage Calculator</h1>
-      <p class="intro">Calculate what percentage one number is of another, find percentage increase or decrease, or calculate X% of any number.</p>
+      <p class="intro">Calculate percentages, percentage change, increases, and decreases without using a spreadsheet. The tool is useful for prices, grades, discounts, markups, salary changes, and simple business checks.</p>
     </div>
     <div class="tool-body">
       
 <div class="input-row">
-  <div class="input-group"><label>Value (A)</label><input type="number" id="pc-a" placeholder="e.g. 200"></div>
-  <div class="input-group"><label>Value (B)</label><input type="number" id="pc-b" placeholder="e.g. 15"></div>
+  <div class="input-group"><label>Base number</label><input type="number" id="pc-base" value="1200"></div>
+  <div class="input-group"><label>Percent</label><input type="number" id="pc-percent" value="15"></div>
 </div>
 <div class="btn-row">
-  <button class="btn btn-primary" onclick="pc('of')">B% of A</button>
-  <button class="btn btn-outline" onclick="pc('what')">A is what % of B</button>
-  <button class="btn btn-outline" onclick="pc('inc')">A + B% increase</button>
-  <button class="btn btn-outline" onclick="pc('dec')">A Ã¢Ë†â€™ B% decrease</button>
+  <button class="btn btn-primary" onclick="percentageOf()">What is X% of Y?</button>
+  <button class="btn btn-outline" onclick="increaseBy()">Increase by %</button>
+  <button class="btn btn-outline" onclick="decreaseBy()">Decrease by %</button>
 </div>
-<div class="result-box" id="pc-o" style="text-align:center;font-size:1.3rem;font-weight:600"></div>
-<script>
-function pc(t){const a=parseFloat(document.getElementById('pc-a').value),b=parseFloat(document.getElementById('pc-b').value);let r;
-if(t==='of')r=`${b}% of ${a} = ${(a*b/100).toFixed(2)}`;
-else if(t==='what')r=`${a} is ${((a/b)*100).toFixed(2)}% of ${b}`;
-else if(t==='inc')r=`${a} + ${b}% = ${(a*(1+b/100)).toFixed(2)}`;
-else r=`${a} Ã¢Ë†â€™ ${b}% = ${(a*(1-b/100)).toFixed(2)}`;
-document.getElementById('pc-o').textContent=r;}
-</script>
+<div class="result-box" id="pc-output">Choose a percentage action.</div>
+
     </div>
-    <div class="related"><h3>Related Tools</h3><div class="related-grid"><a href="discount-calculator.html" class="related-card">Ã°Å¸ÂÂ·Ã¯Â¸Â Discount Calculator</a>
-<a href="profit-calculator.html" class="related-card">Ã°Å¸â€™Â¹ Profit & Loss Calculator</a>
-<a href="tip-calculator.html" class="related-card">Ã°Å¸ÂÂ½Ã¯Â¸Â Tip Calculator</a>
-</div></div>
-    <div class="ad-slot ad-banner" style="margin-top:1.5rem">[ Ad Ã¢â‚¬â€ 728Ãƒâ€”90 Banner ]</div>
+    <div class="related"><h3>Related Tools</h3><div class="related-grid"><a href="calculator.html" class="related-card">Calculator</a><a href="margin-calculator.html" class="related-card">Margin Calculator</a><a href="break-even-calculator.html" class="related-card">Break-even Calculator</a></div></div>
+    <div class="info-grid">
+      <section class="info-card"><h2>What this percentage calculator does</h2><p>The page helps with the most common percentage tasks: finding a percentage of a number, increasing a figure by a percentage, and decreasing a figure by a percentage.</p><p>That covers many everyday scenarios without forcing you into a larger spreadsheet workflow.</p></section><section class="info-card"><h2>Examples and use cases</h2><p>The calculator is suitable for both personal and business calculations.</p><ul><li>working out a 15 percent discount</li><li>checking a pay raise or price increase</li><li>estimating tax or service charges before using a dedicated tax tool</li><li>reviewing sales conversion goals or score improvements</li></ul></section><section class="info-card"><h2>Short explanation</h2><p>Percent means per hundred. The calculator handles the arithmetic for you, but it is still useful to know whether your task is a percentage-of calculation, an increase, or a decrease before you choose the action.</p></section>
+    </div>
+    
+    <section class="faq-grid">
+      <h2 class="faq-heading">Frequently asked questions</h2>
+      <article class="faq-item"><div class="faq-title">What is the difference between percentage of and percentage increase?</div><p>Percentage of finds part of a number. Percentage increase adds that proportion on top of the original amount.</p></article><article class="faq-item"><div class="faq-title">Can I use decimals?</div><p>Yes. Both the base number and the percentage field accept decimals.</p></article><article class="faq-item"><div class="faq-title">Is this suitable for discounts?</div><p>Yes. The decrease function is especially useful for discount checks.</p></article>
+    </section>
+  
+    <div class="ad-slot ad-banner" style="margin-top:1.5rem">[ Ad - 728x90 Banner ]</div>
   </div>
   <aside>
-    <div class="ad-slot ad-sidebar">[ Ad Ã¢â‚¬â€ 300Ãƒâ€”250 ]</div>
+    <div class="ad-slot ad-sidebar">[ Ad - 300x250 ]</div>
   </aside>
 </div>
-
 <script>
-function cp(id,btn){const t=document.getElementById(id);navigator.clipboard.writeText(t.innerText||t.value||'');btn.textContent='Copied!';btn.style.color='green';setTimeout(()=>{btn.textContent='Copy';btn.style.color='';},1500);}
+
+function getPercentageInputs(){
+  return {
+    base: parseFloat(document.getElementById('pc-base').value),
+    percent: parseFloat(document.getElementById('pc-percent').value),
+  };
+}
+function percentageOf(){
+  const { base, percent } = getPercentageInputs();
+  document.getElementById('pc-output').textContent = ((base * percent) / 100).toFixed(2) + ' is ' + percent + '% of ' + base + '.';
+}
+function increaseBy(){
+  const { base, percent } = getPercentageInputs();
+  document.getElementById('pc-output').textContent = 'Increasing ' + base + ' by ' + percent + '% gives ' + (base * (1 + percent / 100)).toFixed(2) + '.';
+}
+function decreaseBy(){
+  const { base, percent } = getPercentageInputs();
+  document.getElementById('pc-output').textContent = 'Decreasing ' + base + ' by ' + percent + '% gives ' + (base * (1 - percent / 100)).toFixed(2) + '.';
+}
+percentageOf();
+
 </script>
 <footer>
   <p>&copy; 2026 ToolDrop &nbsp;&middot;&nbsp; <a href="about.html">About</a> &nbsp;&middot;&nbsp; <a href="contact.html">Contact</a> &nbsp;&middot;&nbsp; <a href="privacy.html">Privacy</a> &nbsp;&middot;&nbsp; <a href="terms.html">Terms</a> &nbsp;&middot;&nbsp; <a href="advertising-disclosure.html">Advertising Disclosure</a></p>
