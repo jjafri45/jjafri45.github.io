@@ -108,6 +108,61 @@ const relatedLookup = {
   "uuid-generator": ["password-generator", "hash-generator", "regex-tester"],
 };
 
+const iconBySlug = {
+  "word-counter": "&#128221;",
+  "case-converter": "&#128290;",
+  "lorem-ipsum": "&#128196;",
+  "text-reverser": "&#128260;",
+  "remove-spaces": "&#129529;",
+  "duplicate-remover": "&#9986;&#65039;",
+  "reading-time": "&#9201;&#65039;",
+  "text-translator": "&#127760;",
+  "age-calculator": "&#127874;",
+  "bmi-calculator": "&#9878;&#65039;",
+  "percentage-calculator": "%",
+  "tip-calculator": "&#127869;&#65039;",
+  "emi-calculator": "&#127974;",
+  "discount-calculator": "&#127991;&#65039;",
+  "compound-interest": "&#128200;",
+  "calculator": "&#129518;",
+  "date-calculator": "&#128197;",
+  "unit-converter": "&#128207;",
+  "color-converter": "&#127912;",
+  "binary-converter": "&#128290;",
+  "roman-converter": "&#127963;&#65039;",
+  "timezone-converter": "&#128338;",
+  "json-formatter": "{ }",
+  "base64-encoder": "&#128274;",
+  "url-encoder": "&#128279;",
+  "password-generator": "&#128273;",
+  "hash-generator": "#",
+  "tax-calculator": "&#129534;",
+  "profit-calculator": "&#128185;",
+  "roi-calculator": "&#127919;",
+  "currency-converter": "&#128177;",
+  "random-number-generator": "&#127922;",
+  "coin-flip": "&#129689;",
+  "countdown-timer": "&#9200;",
+  "stopwatch": "&#127937;",
+  "qr-code-generator": "&#128291;",
+  "line-sorter": "&#8645;",
+  "slug-generator": "&#128279;",
+  "regex-tester": ".*",
+  "markdown-preview": "MD",
+  "html-escape": "&lt;/&gt;",
+  "csv-to-json": "CSV",
+  "json-to-csv": "JSON",
+  "average-calculator": "&#8721;",
+  "ratio-calculator": "&#247;",
+  "margin-calculator": "&#128202;",
+  "break-even-calculator": "&#9868;",
+  "savings-goal-calculator": "&#128176;",
+  "loan-affordability-calculator": "&#127969;",
+  "timestamp-converter": "&#128344;",
+  "text-diff-checker": "&#8646;",
+  "uuid-generator": "ID",
+};
+
 function esc(s) {
   return String(s)
     .replace(/&/g, "&amp;")
@@ -129,6 +184,12 @@ function initials(name) {
     .slice(0, 2)
     .map((part) => part.charAt(0).toUpperCase())
     .join("");
+}
+
+function displayIcon(slug, fallbackName, currentIcon) {
+  if (iconBySlug[slug]) return iconBySlug[slug];
+  if (currentIcon && !/[^\x20-\x7E]/.test(String(currentIcon))) return currentIcon;
+  return initials(fallbackName || slug || "T");
 }
 
 function faqSchema(page) {
@@ -206,6 +267,7 @@ function renderRelated(page, allTools) {
 function buildPage(page, allTools) {
   const schema = JSON.stringify(pageSchema(page));
   const pageHeading = page.h1 || page.name;
+  const pageIcon = displayIcon(page.slug, page.name, page.icon);
   return `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -246,7 +308,7 @@ ${monetagScript}
   <div class="tool-main">
     <div class="ad-slot ad-banner">[ Ad - 728x90 Banner ]</div>
     <div class="tool-header">
-      <div class="icon">${page.icon}</div>
+      <div class="icon">${pageIcon}</div>
       <h1>${pageHeading}</h1>
       <p class="intro">${page.intro}</p>
     </div>
@@ -1211,7 +1273,7 @@ function updateIndex() {
   const toolEntries = allGenerated.map((page) => ({
     id: page.slug,
     cat: page.category,
-    icon: page.icon,
+    icon: displayIcon(page.slug, page.name, page.icon),
     name: page.name,
     desc: page.intro.length > 100 ? page.intro.slice(0, 97) + "..." : page.intro,
   }));
@@ -1220,7 +1282,7 @@ function updateIndex() {
     const vm = require("vm");
     const existingTools = vm.runInNewContext(match[1]).map((tool) => ({
       ...tool,
-      icon: /[^\x20-\x7E]/.test(String(tool.icon || "")) ? initials(tool.name || tool.id || "T") : tool.icon,
+      icon: displayIcon(tool.id, tool.name || tool.id || "T", tool.icon),
     }));
     const merged = [...existingTools.filter((tool) => !toolEntries.find((entry) => entry.id === tool.id)), ...toolEntries];
     indexHtml = indexHtml.replace(/const TOOLS=\[.*?\];/s, `const TOOLS=${JSON.stringify(merged)};`);
